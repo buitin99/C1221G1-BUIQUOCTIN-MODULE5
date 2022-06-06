@@ -1,3 +1,0 @@
-interface IArea {
-    area(): number;
-}
