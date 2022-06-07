@@ -116,9 +116,9 @@
         <td>buiquoctin250199@gmail.com</td>
         <td>ave st</td>
         <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
+            <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
                 Edit
-            </button>
+            </a>
         </td>
         <td>
             <button class="btn btn-danger w-100" data-target="#deleteModal"
@@ -158,9 +158,9 @@
         <td>buiquoctin250199@gmail.com</td>
         <td>ave st</td>
         <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
+            <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
                 Edit
-            </button>
+            </a>
         </td>
         <td>
             <button class="btn btn-danger w-100" data-target="#deleteModal"
@@ -229,9 +229,9 @@
         <td>buiquoctin250199@gmail.com</td>
         <td>ave st</td>
         <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
+            <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
                 Edit
-            </button>
+            </a>
         </td>
         <td>
             <button class="btn btn-danger w-100" data-target="#deleteModal"
@@ -264,7 +264,18 @@
                 <div class="md-form mb-5">
                     <div class="form-outline">
                         <label class="form-label" for="form12">Type Customer</label>
-                        <input type="text" id="form11" class="form-control" />
+<!--                        <input type="text" id="form11" class="form-control" />-->
+                        <select id="customerTypeId"
+                                class="form-control">
+<!--                                onchange="showFacilityType()">-->
+
+                            <option value="null">Select Customer type</option>
+                            <option value="1">Diamond</option>
+                            <option value="2">Platinium</option>
+                            <option value="3">Gold</option>
+                            <option value="4">Silver</option>
+                            <option value="">Member</option>
+                        </select>
                     </div>
                 </div>
 
@@ -278,7 +289,16 @@
                 <div class="md-form mb-5">
                     <div class="form-outline">
                         <label class="form-label" for="form12">Gender</label>
-                        <input type="text" id="form9" class="form-control" />
+<!--                        <input type="text" id="form9" class="form-control" />-->
+                        <select id="customerGender"
+                                class="form-control">
+                            <!--                                onchange="showFacilityType()">-->
+
+                            <option value="null">Select Gender </option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="">None</option>
+                        </select>
                     </div>
                 </div>
 
@@ -317,7 +337,6 @@
         </div>
     </div>
 </div>
-
 <div class="text-center">
     <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm">Clik to
         create new customer</a>

@@ -65,141 +65,101 @@
         </div>
     </div>
 </div>
-<h2 style="text-align: center">Facility List</h2>
+<!--edit-->
+
 <div class="container">
     <div class="row">
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="images/insta-4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Villa Beach Front</h5>
-                    <p>Area : 25000</p>
-                    <p>Price : 10000000</p>
-                    <p>Peoples : 10</p>
-                    <p>Standard : vip</p>
-                    <p>Detail : Có hồ bơi</p>
-                    <p>Pool Area : 500</p>
-                    <p>Floor : 4</p>
-                    <div >
-                        <a href="facility-update.html" class="btn btn-warning" >Update</a>
-                        <button class="btn btn-danger" data-target="#deleteModal"
-                                data-toggle="modal"
-                                onclick="deleteCustomer(1,'1')">Delete
-                            <i class='bx bx-trash'></i>
-                        </button>
-                    </div>
-                    <!--                    </td>-->
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h2 style="text-align: center">Edit Facility</h2>
+            <form>
+                <!-- Name faclity input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example1">Name Facility</label>
+                    <input type="text" id="form1Example1" class="form-control" />
                 </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="images/insta-4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">House Princess 01</h5>
-                    <p>Area : 14000
-                    </p>
-                    <p>Price : 5000000
-                    </p>
-                    <p>Peoples : 7
-                    </p>
-                    <p>Standard : vip</p>
-                    <p>Detail : Có thêm bếp nướng
-                    </p>
-                    <p>Pool Area : No</p>
-                    <p>Floor : 3
-                    </p>
-                    <div >
-                        <a href="facility-update.html" class="btn btn-warning" >Update</a>
-                        <button class="btn btn-danger" data-target="#deleteModal"
-                                data-toggle="modal"
-                                onclick="deleteCustomer(1,'1')">Delete
-                            <i class='bx bx-trash'></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="images/insta-4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Room Twin 01
-                    </h5>
-                    <p>Area : 5000
-                    </p>
-                    <p>Price : 1000000
-                    </p>
-                    <p>Peoples : 2
-                    </p>
-                    <p>Standard : normal
-                    </p>
-                    <p>Detail : Có tivi
-                    <p>Pool Area : No</p>
-                    <p>Floor : No</p>
-                    <div >
-                        <a href="facility-update.html" class="btn btn-warning" >Update</a>
-                        <button class="btn btn-danger" data-target="#deleteModal"
-                                data-toggle="modal"
-                                onclick="deleteCustomer(1,'1')">Delete
-                            <i class='bx bx-trash'></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="images/insta-4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Villa No Beach Front</h5>
-                    <p>Area : 22000</p>
-                    <p>Price : 9000000</p>
-                    <p>Peoples : 8</p>
-                    <p>Standard : normal</p>
-                    <p>Detail : Có hồ bơi</p>
-                    <p>Pool Area : 300</p>
-                    <p>Floor : 3</p>
-                    <div >
-                        <a href="facility-update.html" class="btn btn-warning" >Update</a>
-                        <button class="btn btn-danger" data-target="#deleteModal"
-                                data-toggle="modal"
-                                onclick="deleteCustomer(1,'1')">Delete
-                            <i class='bx bx-trash'></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h2 style="text-align: center; color: white">-------</h2>
 
-
-        <!-- Modal -->
-        <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Delete customer</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Do you really want to delete customer
-                            <span class="text-danger font-weight-bold" id="nameDelete"></span>
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="mx-auto row">
-                            <input type="hidden" name="id" id="idDelete">
-                            <button type="button" class="btn btn-secondary mx-1" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger mx-1 ">Delete</button>
-                        </div>
-                    </div>
+                <!-- Area input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example2">Area</label>
+                    <input type="text" id="form1Example2" class="form-control" />
                 </div>
-            </div>
-        </div>
 
+                <!-- Price input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example3">Price</label>
+                    <input type="text" id="form1Example3" class="form-control" />
+                </div>
+
+                <!-- Peoples input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example4">Peoples</label>
+                    <input type="text" id="form1Example4" class="form-control" />
+                </div>
+
+                <!-- Standard input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example5">Standard</label>
+                    <input type="text" id="form1Example5" class="form-control" />
+                </div>
+
+                <!-- Detail input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example6">Detail</label>
+                    <input type="text" id="form1Example6" class="form-control" />
+                </div>
+
+                <!-- Pool Area input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example7">Pool Area</label>
+                    <input type="text" id="form1Example7" class="form-control" />
+                </div>
+
+                <!-- Floor input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example8">Floor</label>
+                    <input type="text" id="form1Example8" class="form-control" />
+                </div>
+
+                <!-- TypeRent input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example9">Floor</label>
+                    <!--                    <input type="text" id="form1Example9" class="form-control" />-->
+                    <select class="form-control"
+                            id="rentType"
+                            name="rentType" id="form1Example9">
+                        <option value="null">Select Rent type</option>
+                        <option value="1">Hour</option>
+                        <option value="2">Day</option>
+                        <option value="3">Month</option>
+                        <option value="4">Year</option>
+                    </select>
+                </div>
+
+                <!-- CodeService input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form1Example10">Floor</label>
+                    <!--                    <input type="text" id="form1Example8" class="form-control" />-->
+                    <select class="form-control"
+                            id="codeService"
+                            name="rentType" id="form1Example10">
+                        <option value="null">Select name service</option>
+                        <option value="1">Villa</option>
+                        <option value="2">House</option>
+                        <option value="3">Room</option>
+                    </select>
+                </div>
+                <!-- Submit button -->
+                <div class="container col-5">
+                    <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
+                </div>
+            </form>
+            <h2 style="color: white">----</h2>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+<!--edit-->
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-migrate-3.0.1.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -297,24 +257,3 @@
 </div>
 </body>
 </html>
-
-<!--modal-->
-<script>
-    document.querySelector('.table').onclick = ({
-                                                    target
-                                                }) => {
-        if (!target.classList.contains('more')) return;
-        document.querySelectorAll('.dropout.active').forEach(
-            (d) => d !== target.parentElement && d.classList.remove('active')
-        );
-        target.parentElement.classList.toggle('active');
-    };
-</script>
-<script>
-    function deleteCustomer(id, name) {
-        document.getElementById("idDelete").value = id;
-        document.getElementById("nameDelete").innerText = " " + name + "?";
-    }
-
-</script>
-<!--modal-->

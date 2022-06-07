@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
 
@@ -32,8 +34,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">QUOCTIN</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
@@ -41,7 +42,8 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
-                <li class="nav-item active"><a href="facility.html" class="nav-link">Facility</a></li>
+                <li class="nav-item active"><a href="facility.html" class="nav-link">Customer</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Create Customer</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -57,117 +59,83 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
                 <div class="text">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span>
-                        <span>about</span></p>
-                    <h1 class="mb-4 bread">Facility</h1>
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>about</span></p>
+                    <h1 class="mb-4 bread">Contract</h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--create-->
 
+<!--table-->
+<h2 style="text-align: center">Contract List</h2>
 <div class="container">
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <h2 style="text-align: center">Create new Facility</h2>
-            <form>
-                <!-- Name faclity input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example1">Name Facility</label>
-                    <input type="text" id="form1Example1" class="form-control" />
-                </div>
-
-                <!-- Area input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example2">Area</label>
-                    <input type="text" id="form1Example2" class="form-control" />
-                </div>
-
-                <!-- Price input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example3">Price</label>
-                    <input type="text" id="form1Example3" class="form-control" />
-                </div>
-
-                <!-- Peoples input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example4">Peoples</label>
-                    <input type="text" id="form1Example4" class="form-control" />
-                </div>
-
-                <!-- Standard input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example5">Standard</label>
-                    <input type="text" id="form1Example5" class="form-control" />
-                </div>
-
-                <!-- Detail input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example6">Detail</label>
-                    <input type="text" id="form1Example6" class="form-control" />
-                </div>
-
-                <!-- Pool Area input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example7">Pool Area</label>
-                    <input type="text" id="form1Example7" class="form-control" />
-                </div>
-
-                <!-- Floor input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example8">Floor</label>
-                    <input type="text" id="form1Example8" class="form-control" />
-                </div>
-
-                <!-- TypeRent input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example9">Floor</label>
-<!--                    <input type="text" id="form1Example9" class="form-control" />-->
-                    <select class="form-control"
-                            id="rentType"
-                            name="rentType" id="form1Example9">
-                        <option value="null">Select Rent type</option>
-                        <option value="1">Hour</option>
-                        <option value="2">Day</option>
-                        <option value="3">Month</option>
-                        <option value="4">Year</option>
-                    </select>
-                </div>
-
-                <!-- CodeService input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example10">Floor</label>
-<!--                    <input type="text" id="form1Example8" class="form-control" />-->
-                    <select class="form-control"
-                            id="codeService"
-                            name="rentType" id="form1Example10">
-                        <option value="null">Select name service</option>
-                        <option value="1">Villa</option>
-                        <option value="2">House</option>
-                        <option value="3">Room</option>
-                    </select>
-                </div>
-
-
-                <!-- Submit button -->
-                <div class="container col-5">
-                <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
-                </div>
-            </form>
-            <h2 style="color: white">----</h2>
-        </div>
-        <div class="col-3"></div>
-    </div>
+    <table class="table table-borderless table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Service</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Start date</th>
+            <th scope="col">End date</th>
+            <th scope="col">Deposit</th>
+            <th scope="col">Total</th>
+            <th scope="col" class="col-3">Attach</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Villa River Side</td>
+            <td>Bùi Quốc Tín</td>
+            <td>01-01-2022</td>
+            <td>05-01-2022</td>
+            <td>500.000</td>
+            <td>5.000.000</td>
+            <td>Buffet, karaoke, thue xe dap</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Villa Beach Side</td>
+            <td>Bùi Quốc Tín</td>
+            <td>02-01-2022</td>
+            <td>02-01-2022</td>
+            <td>5.000.000</td>
+            <td>50.000.000</td>
+            <td>Buffet, karaoke, thue xe dap, massage</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Villa South Side</td>
+            <td>Bùi Quốc Tín</td>
+            <td>02-01-2022</td>
+            <td>02-01-2022</td>
+            <td>50.000.000</td>
+            <td>500.000.000</td>
+            <td>Buffet, karaoke, thue xe dap, massage</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Villa North Side</td>
+            <td>Bùi Quốc Tín</td>
+            <td>02-01-2022</td>
+            <td>02-01-2022</td>
+            <td>5000.000</td>
+            <td>50.000.000</td>
+            <td>Buffet, karaoke, thue xe dap, massage</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-<!--create-->
+
+
+<!--table-->
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">QuocTin Hotel</h2>
+                    <h2 class="ftco-heading-2">QUOCTIN HOTEL</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -203,7 +171,7 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">999 Mountain DEW st, QUẬN CAM,THÀNH PHỐ CALI, HOA KỲ</span></li>
+                            <li><span class="icon icon-map-marker">a</span><span class="text">999 Mountain DEW st, QUẬN CAM,THÀNH PHỐ CALI, HOA KỲ</span></li>
                             <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span class="text">buiquoctin.job@gmail.com</span></a></li>
                         </ul>
@@ -222,5 +190,27 @@
     </div>
 </footer>
 
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+</div>
 </body>
 </html>

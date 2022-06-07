@@ -71,24 +71,34 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-            <h2 style="text-align: center">Create new Facility</h2>
+            <h2 style="text-align: center">Create new Customer</h2>
             <form>
-                <!-- Name faclity input -->
+                <!-- Name  input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example1">Name Facility</label>
+                    <label class="form-label" for="form1Example1">Customer Name</label>
                     <input type="text" id="form1Example1" class="form-control" />
                 </div>
 
-                <!-- Area input -->
+                <!-- Type input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example2">Area</label>
-                    <input type="text" id="form1Example2" class="form-control" />
+                    <label class="form-label" for="form1Example2">Type customer</label>
+<!--                    <input type="text" id="form1Example2" class="form-control" />-->
+                    <select class="form-control"
+                            id="customerType"
+                            name="rentType" id="form1Example2">
+                        <option value="null">Select Customer type</option>
+                        <option value="1">Diamond</option>
+                        <option value="2">Platinium</option>
+                        <option value="3">Gold</option>
+                        <option value="4">Silver</option>
+                        <option value="5">Member</option>
+                    </select>
                 </div>
 
-                <!-- Price input -->
+                <!-- DOB input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example3">Price</label>
-                    <input type="text" id="form1Example3" class="form-control" />
+                    <label class="form-label" for="form1Example3">DOB</label>
+                    <input type="date" id="form1Example3" class="form-control" />
                 </div>
 
                 <!-- Peoples input -->
@@ -97,63 +107,32 @@
                     <input type="text" id="form1Example4" class="form-control" />
                 </div>
 
-                <!-- Standard input -->
+                <!-- ID Card input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example5">Standard</label>
+                    <label class="form-label" for="form1Example5">ID Card</label>
                     <input type="text" id="form1Example5" class="form-control" />
                 </div>
 
-                <!-- Detail input -->
+                <!-- Phone input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example6">Detail</label>
+                    <label class="form-label" for="form1Example6">Phone</label>
                     <input type="text" id="form1Example6" class="form-control" />
                 </div>
 
-                <!-- Pool Area input -->
+                <!-- Email input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example7">Pool Area</label>
+                    <label class="form-label" for="form1Example7">Email</label>
                     <input type="text" id="form1Example7" class="form-control" />
                 </div>
 
-                <!-- Floor input -->
+                <!-- Address input -->
                 <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example8">Floor</label>
+                    <label class="form-label" for="form1Example8">Address</label>
                     <input type="text" id="form1Example8" class="form-control" />
                 </div>
-
-                <!-- TypeRent input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example9">Floor</label>
-<!--                    <input type="text" id="form1Example9" class="form-control" />-->
-                    <select class="form-control"
-                            id="rentType"
-                            name="rentType" id="form1Example9">
-                        <option value="null">Select Rent type</option>
-                        <option value="1">Hour</option>
-                        <option value="2">Day</option>
-                        <option value="3">Month</option>
-                        <option value="4">Year</option>
-                    </select>
-                </div>
-
-                <!-- CodeService input -->
-                <div class="form-outline mb-3">
-                    <label class="form-label" for="form1Example10">Floor</label>
-<!--                    <input type="text" id="form1Example8" class="form-control" />-->
-                    <select class="form-control"
-                            id="codeService"
-                            name="rentType" id="form1Example10">
-                        <option value="null">Select name service</option>
-                        <option value="1">Villa</option>
-                        <option value="2">House</option>
-                        <option value="3">Room</option>
-                    </select>
-                </div>
-
-
                 <!-- Submit button -->
                 <div class="container col-5">
-                <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
+                    <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
                 </div>
             </form>
             <h2 style="color: white">----</h2>
