@@ -12,4 +12,19 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showNumber(x:string) {
+    (document.getElementById("display")as HTMLInputElement).value += x;
+    return x;
+  }
+
+  clear() {
+    (document.getElementById("display")as HTMLInputElement).value="";
+  }
+
+  result() {
+    let x = (document.getElementById("display")as HTMLInputElement).value;
+    let y = eval(x);
+    (document.getElementById("display")as HTMLInputElement).value = y;
+    return y;
+  }
 }
