@@ -8,6 +8,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FacilityComponent } from './facility/facility.component';
 import { ContractComponent } from './contract/contract.component';
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerCreateComponent } from './customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './customer-update/customer-update.component';
+import { FacilityCreateComponent } from './facility-create/facility-create.component';
+import { FacilityUpdateComponent } from './facility-update/facility-update.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { CustomerComponent } from './customer/customer.component';
     HomePageComponent,
     FacilityComponent,
     ContractComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerCreateComponent,
+    CustomerUpdateComponent,
+    FacilityCreateComponent,
+    FacilityUpdateComponent
   ],
   imports: [
     BrowserModule
