@@ -12,6 +12,9 @@ import { CustomerCreateComponent } from './customer-create/customer-create.compo
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
 import { FacilityCreateComponent } from './facility-create/facility-create.component';
 import { FacilityUpdateComponent } from './facility-update/facility-update.component';
+import { RouterModule} from "@angular/router";
+import {CustomerRoutingModule} from "./customer-routing.module";
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { FacilityUpdateComponent } from './facility-update/facility-update.compo
     FacilityUpdateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CustomerRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
