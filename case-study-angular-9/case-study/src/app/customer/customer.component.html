@@ -4,174 +4,204 @@
   <thead class="bg-light">
   <tr>
     <!--        <th>#</th>-->
+<!--    <th>Name</th>-->
+<!--    <th>Type</th>-->
+<!--    <th>DOB</th>-->
+<!--    <th>Gender</th>-->
+<!--    <th>ID Card</th>-->
+<!--    <th>Phone</th>-->
+<!--    <th>Email</th>-->
+<!--    <th>Address</th>-->
+<!--    <th>Edit</th>-->
+<!--    <th>Delete</th>-->
+    <th>Id</th>
     <th>Name</th>
-    <th>Type</th>
-    <th>DOB</th>
+    <th>Code</th>
     <th>Gender</th>
-    <th>ID Card</th>
+    <th>DOB</th>
+    <th>IDCard</th>
     <th>Phone</th>
     <th>Email</th>
     <th>Address</th>
-    <th>Edit</th>
-    <th>Delete</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>
-      <div class="d-flex align-items-center">
-        <img
-          src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-          alt=""
-          style="width: 45px; height: 45px"
-          class="rounded-circle"
-        />
-        <div class="ms-3">
-          <p class="fw-bold mb-1">John Doe</p>
-          <p class="text-muted mb-0">john.doe@gmail.com</p>
-        </div>
-      </div>
-    </td>
-    <td>
-      <p class="fw-normal mb-1">Software engineer</p>
-      <p class="text-muted mb-0">IT department</p>
-    </td>
-    <td>
-      <!--            <span class="badge badge-success rounded-pill d-inline">Active</span>-->
-      <p>25/01/1999</p>
-    </td>
-    <!--        <td>Senior</td>-->
-    <td>Male</td>
-    <td>123456789</td>
-    <td>0123456789</td>
-    <td>buiquoctin250199@gmail.com</td>
-    <td>ave st</td>
-    <td>
-      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
-        Edit
-      </a>
-    </td>
-    <td>
-      <button class="btn btn-danger w-100" data-target="#deleteModal"
-              data-toggle="modal"
-              onclick="deleteCustomer(1,'1')">Delete
-        <i class='bx bx-trash'></i>
-      </button>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="d-flex align-items-center">
-        <img
-          src="https://mdbootstrap.com/img/new/avatars/6.jpg"
-          class="rounded-circle"
-          alt=""
-          style="width: 45px; height: 45px"
-        />
-        <div class="ms-3">
-          <p class="fw-bold mb-1">Alex Ray</p>
-          <p class="text-muted mb-0">alex.ray@gmail.com</p>
-        </div>
-      </div>
-    </td>
-    <td>
-      <p class="fw-normal mb-1">Consultant</p>
-      <p class="text-muted mb-0">Finance</p>
-    </td>
-    <td>
-      <!--            <span class="badge badge-success rounded-pill d-inline">Active</span>-->
-      <p>25/01/1999</p>
-    </td>
-    <!--        <td>Senior</td>-->
-    <td>Male</td>
-    <td>123456789</td>
-    <td>0123456789</td>
-    <td>buiquoctin250199@gmail.com</td>
-    <td>ave st</td>
-    <td>
-      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
-        Edit
-      </a>
-    </td>
-    <td>
-      <button class="btn btn-danger w-100" data-target="#deleteModal"
-              data-toggle="modal"
-              onclick="deleteCustomer(1,'1')">Delete
-        <i class='bx bx-trash'></i>
-      </button>
-    </td>
+<!--  <tr>-->
+<!--    <td>-->
+<!--      <div class="d-flex align-items-center">-->
+<!--        <img-->
+<!--          src="https://mdbootstrap.com/img/new/avatars/8.jpg"-->
+<!--          alt=""-->
+<!--          style="width: 45px; height: 45px"-->
+<!--          class="rounded-circle"-->
+<!--        />-->
+<!--        <div class="ms-3">-->
+<!--          <p class="fw-bold mb-1">John Doe</p>-->
+<!--          <p class="text-muted mb-0">john.doe@gmail.com</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <p class="fw-normal mb-1">Software engineer</p>-->
+<!--      <p class="text-muted mb-0">IT department</p>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      &lt;!&ndash;            <span class="badge badge-success rounded-pill d-inline">Active</span>&ndash;&gt;-->
+<!--      <p>25/01/1999</p>-->
+<!--    </td>-->
+<!--    &lt;!&ndash;        <td>Senior</td>&ndash;&gt;-->
+<!--    <td>Male</td>-->
+<!--    <td>123456789</td>-->
+<!--    <td>0123456789</td>-->
+<!--    <td>buiquoctin250199@gmail.com</td>-->
+<!--    <td>ave st</td>-->
+<!--    <td>-->
+<!--      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">-->
+<!--        Edit-->
+<!--      </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <button class="btn btn-danger w-100" data-target="#deleteModal"-->
+<!--              data-toggle="modal"-->
+<!--              onclick="deleteCustomer(1,'1')">Delete-->
+<!--        <i class='bx bx-trash'></i>-->
+<!--      </button>-->
+<!--    </td>-->
+<!--  </tr>-->
 
-    <!--        <td>-->
-    <!--        <span class="badge badge-primary rounded-pill d-inline"-->
-    <!--        >Onboarding</span-->
-    <!--        >-->
-    <!--        </td>-->
-    <!--        <td>Junior</td>-->
-    <!--        <td>-->
-    <!--            <button-->
-    <!--                    type="button"-->
-    <!--                    class="btn btn-link btn-rounded btn-sm fw-bold"-->
-    <!--                    data-mdb-ripple-color="dark"-->
-    <!--            >-->
-    <!--                Edit-->
-    <!--            </button>-->
-    <!--        </td>-->
+<!--<th>Id</th>-->
+<!--<th>Name</th>-->
+<!--<th>Code</th>-->
+<!--<th>Gender</th>-->
+<!--<th>DOB</th>-->
+<!--<th>IDCard</th>-->
+<!--<th>Phone</th>-->
+<!--<th>Email</th>-->
+<!--<th>Address</th>-->
+  <tr *ngFor="let c of customers">
+    <td>{{c.customerId}}</td>
+    <td>{{c.customerName}}</td>
+    <td>{{c.customerCode}}</td>
+    <td>{{c.customerGender}}</td>
+    <td>{{c.customerBirth}}</td>
+    <td>{{c.customerIdCard}}</td>
+    <td>{{c.customerPhone}}</td>
+    <td>{{c.customerEmail}}</td>
+    <td>{{c.customerAddress}}</td>
   </tr>
-  <tr>
-    <td>
-      <div class="d-flex align-items-center">
-        <img
-          src="https://mdbootstrap.com/img/new/avatars/7.jpg"
-          class="rounded-circle"
-          alt=""
-          style="width: 45px; height: 45px"
-        />
-        <div class="ms-3">
-          <p class="fw-bold mb-1">Kate Hunington</p>
-          <p class="text-muted mb-0">kate.hunington@gmail.com</p>
-        </div>
-      </div>
-    </td>
-    <td>
-      <p class="fw-normal mb-1">Designer</p>
-      <p class="text-muted mb-0">UI/UX</p>
-    </td>
-    <!--        <td>-->
-    <!--            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>-->
-    <!--        </td>-->
-    <!--        <td>Senior</td>-->
-    <!--        <td>-->
-    <!--            <button-->
-    <!--                    type="button"-->
-    <!--                    class="btn btn-link btn-rounded btn-sm fw-bold"-->
-    <!--                    data-mdb-ripple-color="dark"-->
-    <!--            >-->
-    <!--                Edit-->
-    <!--            </button>-->
-    <!--        </td>-->
-    <td>
-      <!--            <span class="badge badge-success rounded-pill d-inline">Active</span>-->
-      <p>25/01/1999</p>
-    </td>
-    <!--        <td>Senior</td>-->
-    <td>Male</td>
-    <td>123456789</td>
-    <td>0123456789</td>
-    <td>buiquoctin250199@gmail.com</td>
-    <td>ave st</td>
-    <td>
-      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">
-        Edit
-      </a>
-    </td>
-    <td>
-      <button class="btn btn-danger w-100" data-target="#deleteModal"
-              data-toggle="modal"
-              onclick="deleteCustomer(1,'1')">Delete
-        <i class='bx bx-trash'></i>
-      </button>
-    </td>
-  </tr>
+<!--  <tr>-->
+<!--    <td>-->
+<!--      <div class="d-flex align-items-center">-->
+<!--        <img-->
+<!--          src="https://mdbootstrap.com/img/new/avatars/6.jpg"-->
+<!--          class="rounded-circle"-->
+<!--          alt=""-->
+<!--          style="width: 45px; height: 45px"-->
+<!--        />-->
+<!--        <div class="ms-3">-->
+<!--          <p class="fw-bold mb-1">Alex Ray</p>-->
+<!--          <p class="text-muted mb-0">alex.ray@gmail.com</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <p class="fw-normal mb-1">Consultant</p>-->
+<!--      <p class="text-muted mb-0">Finance</p>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      &lt;!&ndash;            <span class="badge badge-success rounded-pill d-inline">Active</span>&ndash;&gt;-->
+<!--      <p>25/01/1999</p>-->
+<!--    </td>-->
+<!--    &lt;!&ndash;        <td>Senior</td>&ndash;&gt;-->
+<!--    <td>Male</td>-->
+<!--    <td>123456789</td>-->
+<!--    <td>0123456789</td>-->
+<!--    <td>buiquoctin250199@gmail.com</td>-->
+<!--    <td>ave st</td>-->
+<!--    <td>-->
+<!--      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">-->
+<!--        Edit-->
+<!--      </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <button class="btn btn-danger w-100" data-target="#deleteModal"-->
+<!--              data-toggle="modal"-->
+<!--              onclick="deleteCustomer(1,'1')">Delete-->
+<!--        <i class='bx bx-trash'></i>-->
+<!--      </button>-->
+<!--    </td>-->
+
+<!--    &lt;!&ndash;        <td>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <span class="badge badge-primary rounded-pill d-inline"&ndash;&gt;-->
+<!--    &lt;!&ndash;        >Onboarding</span&ndash;&gt;-->
+<!--    &lt;!&ndash;        >&ndash;&gt;-->
+<!--    &lt;!&ndash;        </td>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <td>Junior</td>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <td>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <button&ndash;&gt;-->
+<!--    &lt;!&ndash;                    type="button"&ndash;&gt;-->
+<!--    &lt;!&ndash;                    class="btn btn-link btn-rounded btn-sm fw-bold"&ndash;&gt;-->
+<!--    &lt;!&ndash;                    data-mdb-ripple-color="dark"&ndash;&gt;-->
+<!--    &lt;!&ndash;            >&ndash;&gt;-->
+<!--    &lt;!&ndash;                Edit&ndash;&gt;-->
+<!--    &lt;!&ndash;            </button>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </td>&ndash;&gt;-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>-->
+<!--      <div class="d-flex align-items-center">-->
+<!--        <img-->
+<!--          src="https://mdbootstrap.com/img/new/avatars/7.jpg"-->
+<!--          class="rounded-circle"-->
+<!--          alt=""-->
+<!--          style="width: 45px; height: 45px"-->
+<!--        />-->
+<!--        <div class="ms-3">-->
+<!--          <p class="fw-bold mb-1">Kate Hunington</p>-->
+<!--          <p class="text-muted mb-0">kate.hunington@gmail.com</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <p class="fw-normal mb-1">Designer</p>-->
+<!--      <p class="text-muted mb-0">UI/UX</p>-->
+<!--    </td>-->
+<!--    &lt;!&ndash;        <td>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </td>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <td>Senior</td>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <td>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <button&ndash;&gt;-->
+<!--    &lt;!&ndash;                    type="button"&ndash;&gt;-->
+<!--    &lt;!&ndash;                    class="btn btn-link btn-rounded btn-sm fw-bold"&ndash;&gt;-->
+<!--    &lt;!&ndash;                    data-mdb-ripple-color="dark"&ndash;&gt;-->
+<!--    &lt;!&ndash;            >&ndash;&gt;-->
+<!--    &lt;!&ndash;                Edit&ndash;&gt;-->
+<!--    &lt;!&ndash;            </button>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </td>&ndash;&gt;-->
+<!--    <td>-->
+<!--      &lt;!&ndash;            <span class="badge badge-success rounded-pill d-inline">Active</span>&ndash;&gt;-->
+<!--      <p>25/01/1999</p>-->
+<!--    </td>-->
+<!--    &lt;!&ndash;        <td>Senior</td>&ndash;&gt;-->
+<!--    <td>Male</td>-->
+<!--    <td>123456789</td>-->
+<!--    <td>0123456789</td>-->
+<!--    <td>buiquoctin250199@gmail.com</td>-->
+<!--    <td>ave st</td>-->
+<!--    <td>-->
+<!--      <a type="button" class="btn btn-link btn-sm btn-rounded" href="customer-update.html">-->
+<!--        Edit-->
+<!--      </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--      <button class="btn btn-danger w-100" data-target="#deleteModal"-->
+<!--              data-toggle="modal"-->
+<!--              onclick="deleteCustomer(1,'1')">Delete-->
+<!--        <i class='bx bx-trash'></i>-->
+<!--      </button>-->
+<!--    </td>-->
+<!--  </tr>-->
   </tbody>
 </table>
 <!--table-->
