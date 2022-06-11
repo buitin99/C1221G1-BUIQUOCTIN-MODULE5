@@ -18,6 +18,7 @@ import { CustomerTypeListComponent } from './customer/customer-type-list/custome
 import { FacilityTypeComponent } from './facility/facility-type/facility-type.component';
 import { RentTypeComponent } from './facility/rent-type/rent-type.component';
 import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FacilityDetailComponent } from './facility/facility-detail/facility-det
     CustomerTypeListComponent,
     FacilityTypeComponent,
     RentTypeComponent,
-    FacilityDetailComponent
+    FacilityDetailComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
