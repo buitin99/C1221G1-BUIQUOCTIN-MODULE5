@@ -1,11 +1,10 @@
 <h2 style="text-align: center">Facility List</h2>
 <div class="container" >
-  <div class="row">
+  <div class="row" *ngFor="let f of facilitys">
     <div class="col-4">
       <div class="card" style="width: 18rem;">
         <img src="../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <tr *ngFor="let f of facilitys; index as i">
+        <div class="card-body" >
           <h5 class="card-title" >Villa Beach Front</h5>
           <p>Area : {{f.serviceArea}}</p>
           <p>Price : {{f.serviceCost}}</p>
@@ -15,7 +14,6 @@
           <p>Pool Area : {{f.poolArea}}</p>
           <p>Floor : {{f.numberOfFloor}}</p>
           <p>Floor : {{f.numberOfFloor}}</p>
-          </tr>
           <div>
             <a href="facility-update.html" class="btn btn-warning" style="float: left">Update</a>
             <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
@@ -33,18 +31,14 @@
         <img src="../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">House Princess 01</h5>
-          <p>Area : 14000
-          </p>
-          <p>Price : 5000000
-          </p>
-          <p>Peoples : 7
-          </p>
+          <p>Area : {{f.serviceArea}}</p>
+          <p>Price : {{f.serviceCost}}</p>
+          <p>Peoples : {{f.serviceMaxPeople}}</p>
           <p>Standard : vip</p>
-          <p>Detail : Có thêm bếp nướng
-          </p>
-          <p>Pool Area : No</p>
-          <p>Floor : 3
-          </p>
+          <p>Detail : {{f.descriptionOtherConvenience}}</p>
+          <p>Pool Area : {{f.poolArea}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
           <div>
             <a href="facility-update.html" class="btn btn-warning">Update</a>
             <button class="btn btn-danger" data-target="#deleteModal"
@@ -62,17 +56,14 @@
         <div class="card-body">
           <h5 class="card-title">Room Twin 01
           </h5>
-          <p>Area : 5000
-          </p>
-          <p style="color: black">Price : 1000000
-          </p>
-          <p>Peoples : 2
-          </p>
-          <p>Standard : normal
-          </p>
-          <p>Detail : Có tivi
-          <p>Pool Area : No</p>
-          <p>Floor : No</p>
+          <p>Area : {{f.serviceArea}}</p>
+          <p>Price : {{f.serviceCost}}</p>
+          <p>Peoples : {{f.serviceMaxPeople}}</p>
+          <p>Standard : vip</p>
+          <p>Detail : {{f.descriptionOtherConvenience}}</p>
+          <p>Pool Area : {{f.poolArea}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
           <div>
             <a href="facility-update.html" class="btn btn-warning">Update</a>
             <button class="btn btn-danger" data-target="#deleteModal"
@@ -84,29 +75,6 @@
         </div>
       </div>
     </div>
-    <!--        <div class="col-3">-->
-    <!--            <div class="card" style="width: 18rem;">-->
-    <!--                <img src="images/insta-4.jpg" class="card-img-top" alt="...">-->
-    <!--                <div class="card-body">-->
-    <!--                    <h5 class="card-title">Villa No Beach Front</h5>-->
-    <!--                    <p>Area : 22000</p>-->
-    <!--                    <p>Price : 9000000</p>-->
-    <!--                    <p>Peoples : 8</p>-->
-    <!--                    <p>Standard : normal</p>-->
-    <!--                    <p>Detail : Có hồ bơi</p>-->
-    <!--                    <p>Pool Area : 300</p>-->
-    <!--                    <p>Floor : 3</p>-->
-    <!--                    <div >-->
-    <!--                        <a href="facility-update.html" class="btn btn-warning" >Update</a>-->
-    <!--                        <button class="btn btn-danger" data-target="#deleteModal"-->
-    <!--                                data-toggle="modal"-->
-    <!--                                onclick="deleteCustomer(1,'1')">Delete-->
-    <!--                            <i class='bx bx-trash'></i>-->
-    <!--                        </button>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
     <h2 style="text-align: center; color: white">-------</h2>
 
 

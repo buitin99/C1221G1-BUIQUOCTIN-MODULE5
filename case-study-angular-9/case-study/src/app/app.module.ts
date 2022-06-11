@@ -17,6 +17,7 @@ import {RouterModule} from '@angular/router';
 import { CustomerTypeListComponent } from './customer/customer-type-list/customer-type-list.component';
 import { FacilityTypeComponent } from './facility/facility-type/facility-type.component';
 import { RentTypeComponent } from './facility/rent-type/rent-type.component';
+import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RentTypeComponent } from './facility/rent-type/rent-type.component';
     FacilityUpdateComponent,
     CustomerTypeListComponent,
     FacilityTypeComponent,
-    RentTypeComponent
+    RentTypeComponent,
+    FacilityDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
 import {Customer} from './customer';
-import {Facility} from './facility';
+import {FacilityDetail} from './facility-detail';
 
 export interface Contract {
   code: string;
-  informationContract: Customer;
-  informationCustomer: Facility;
+  customerName: Customer;
+  facilityDetail: FacilityDetail;
   dateStart: string;
   dateEnd: string;
   deposit: number;
