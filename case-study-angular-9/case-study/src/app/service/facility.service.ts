@@ -7,18 +7,6 @@ import {FacilityType} from '../model/facility-type';
   providedIn: 'root'
 })
 export class FacilityService {
-
-  serviceId: number;
-  serviceName: string;
-  serviceArea: number;
-  serviceCost: number;
-  serviceMaxPeople: string;
-  standardRoom: string;
-  descriptionOtherConvenience: string;
-  poolArea: number;
-  numberOfFloor: number;
-  rentType: RentType;
-  facilityType: FacilityType;
   facilitys: Facility[] = [{serviceId: 1, serviceName: 'Villa-Vip', serviceArea: 200
     , serviceCost: 500, serviceMaxPeople: 5, standardRoom: 'Vip', descriptionOtherConvenience: 'Tivi + Tủ lạnh', poolArea: 200,
     numberOfFloor: 3, facilityType: {

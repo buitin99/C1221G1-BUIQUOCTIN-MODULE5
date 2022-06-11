@@ -18,4 +18,7 @@ export class RentTypeService {
   }];
 
   constructor() { }
+  getAll() {
+    return this.rentTypes;
+  }
 }

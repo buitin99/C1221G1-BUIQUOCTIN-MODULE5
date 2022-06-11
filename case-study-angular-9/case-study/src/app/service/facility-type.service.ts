@@ -19,4 +19,8 @@ export class FacilityTypeService {
 
 
   constructor() { }
+
+  getAll() {
+    return this.facilityTypes;
+  }
 }
