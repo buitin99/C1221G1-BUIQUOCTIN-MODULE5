@@ -7,5 +7,5 @@ export interface Contract {
   informationCustomer: Facility;
   dateStart: string;
   dateEnd: string;
-  money: number;
+  deposit: number;
 }

@@ -1,18 +1,21 @@
 <h2 style="text-align: center">Facility List</h2>
-<div class="container">
+<div class="container" >
   <div class="row">
     <div class="col-4">
       <div class="card" style="width: 18rem;">
         <img src="../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Villa Beach Front</h5>
-          <p>Area : 25000</p>
-          <p>Price : 10000000</p>
-          <p>Peoples : 10</p>
+          <tr *ngFor="let f of facilitys; index as i">
+          <h5 class="card-title" >Villa Beach Front</h5>
+          <p>Area : {{f.serviceArea}}</p>
+          <p>Price : {{f.serviceCost}}</p>
+          <p>Peoples : {{f.serviceMaxPeople}}</p>
           <p>Standard : vip</p>
-          <p>Detail : Có hồ bơi</p>
-          <p>Pool Area : 500</p>
-          <p>Floor : 4</p>
+          <p>Detail : {{f.descriptionOtherConvenience}}</p>
+          <p>Pool Area : {{f.poolArea}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
+          <p>Floor : {{f.numberOfFloor}}</p>
+          </tr>
           <div>
             <a href="facility-update.html" class="btn btn-warning" style="float: left">Update</a>
             <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
@@ -165,21 +168,3 @@
 </script>
 <!--modal-->
 
-
-<!--&lt;!&ndash;list&ndash;&gt;-->
-<!--<h1>Danh sách danh mục sản phẩm</h1>-->
-<!--<table>-->
-<!--  <tr>-->
-<!--    <td>STT</td>-->
-<!--    <td>Tên</td>-->
-<!--    <td>Diện tích</td>-->
-<!--    <td>Giá</td>-->
-<!--  </tr>-->
-<!--  <tr *ngFor="let category of facilitys; index as i">-->
-<!--    <td>{{i + 1}}</td>-->
-<!--    <td>{{category.serviceId}}</td>-->
-<!--    <td>{{category.serviceName}}</td>-->
-<!--    <td>{{category.serviceArea}}</td>-->
-<!--    <td>{{category.serviceCost}}</td>-->
-<!--  </tr>-->
-<!--</table>-->

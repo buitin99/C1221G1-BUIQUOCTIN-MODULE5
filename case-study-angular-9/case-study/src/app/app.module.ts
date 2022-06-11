@@ -14,6 +14,9 @@ import { FacilityComponent } from './facility/facility.component';
 import { FacilityCreateComponent } from './facility-create/facility-create.component';
 import { FacilityUpdateComponent } from './facility-update/facility-update.component';
 import {RouterModule} from '@angular/router';
+import { CustomerTypeListComponent } from './customer/customer-type-list/customer-type-list.component';
+import { FacilityTypeComponent } from './facility/facility-type/facility-type.component';
+import { RentTypeComponent } from './facility/rent-type/rent-type.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {RouterModule} from '@angular/router';
     CustomerUpdateComponent,
     FacilityComponent,
     FacilityCreateComponent,
-    FacilityUpdateComponent
+    FacilityUpdateComponent,
+    CustomerTypeListComponent,
+    FacilityTypeComponent,
+    RentTypeComponent
   ],
   imports: [
     BrowserModule,
