@@ -3,12 +3,11 @@ export interface Facility {
   serviceName: string;
   serviceArea;
   serviceCost: string;
-  // serviceMaxPeople: string;
-  // standardRoom: string;
-  // descriptionOtherConvenience: string;
-  // poolArea: string;
-  // numberOfFloor: string;
-  // RentType: any;
-  // FacilityType: any;
-  // contractList: any;
+  serviceMaxPeople: string;
+  standardRoom: string;
+  descriptionOtherConvenience: string;
+  poolArea: string;
+  numberOfFloor: string;
+  rentType: any;
+  facilityType: any;
 }
