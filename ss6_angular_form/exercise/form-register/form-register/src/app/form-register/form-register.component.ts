@@ -30,28 +30,21 @@ export class FormRegisterComponent implements OnInit {
       phone: new FormControl("", [
         Validators.required,
         Validators.pattern(/^\+84\d{9,10}$/)])
-    })
+    },this.validateConfirmPassword)
   }
 
   ngOnInit(): void {
   }
 
-  // validatePhone(phone: AbstractControl) {
-  //
-  //   let value = phone.value;
-  //   console.log(value);
-  //   if (value != (/^\+84\d{9,10}$/)) {
-  //     return {'invalidPhone': true};
-  //   } else {
-  //     return null;
-  //   }
-  // }
 
-  valideteConfirmPassword(confirmPassword: AbstractControl, password) {
-    let result = password.value;
-    let value = confirmPassword.value;
-    if (result == value){
-      return {'invalidPassword' : true};
+
+  validateConfirmPassword(confirm: AbstractControl) {
+    let password = confirm.get('password').value;
+    let confirmPassword = confirm.get('confirmPassword').value;
+    if (confirmPassword !== password) {
+      return {
+        confirmPassword: true
+      };
     } else {
       return null;
     }

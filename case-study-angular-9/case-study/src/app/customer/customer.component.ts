@@ -4,6 +4,17 @@ import {CustomerService} from '../service/customer.service';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerType} from '../model/customer-type';
 
+// <!--customerId: number;-->
+// <!--customerName: string;-->
+// <!--customerBirth: string;-->
+// <!--customerGender: string;-->
+// <!--customerIdCard: string;-->
+// <!--customerPhone: string;-->
+// <!--customerEmail: string;-->
+// <!--customerAddress: string;-->
+// <!--customerCode: string;-->
+// <!--customerType: CustomerType;-->
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -16,23 +27,15 @@ export class CustomerComponent implements OnInit {
   customers: Customer[] = [];
   constructor(private customerService: CustomerService) {
     this.customerForm = new FormGroup({
-      customerCode: new FormControl('', [Validators.required, Validators.pattern( /^KH-\d{4}$/),
-      this.validCustomerCode]),
+      customerCode: new FormControl('', [Validators.required, Validators.pattern( /^KH-\d{4}$/)]),
       customerEmail: new FormControl('', [Validators.required, Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
       customerIdCard: new FormControl('', [Validators.required, Validators.pattern(/^\d{9}$/)]),
-      customerBirth: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)])
+      customerBirth: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
+      customerName: new FormControl('', [Validators.required]),
+      customerAddress: new FormControl('', [Validators.required])
     });
   }
 
-  validCustomerCode(customerCode: AbstractControl) {
-    let a;
-    a = customerCode.value;
-    if (a !== (/^KH-\d{4}$/)) {
-      return {invalidCode : true};
-    } else {
-      return null;
-    }
-  }
 
   ngOnInit(): void {
     this.getAll();

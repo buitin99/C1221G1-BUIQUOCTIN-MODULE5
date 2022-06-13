@@ -1,17 +1,19 @@
 <h2>Form Register</h2>
 <form [formGroup]="form" (ngSubmit)="formRegister()">
   <label>Email</label>
+<!--  <div>-->
   <input type="text" formControlName="email"><br>
-  <p style="color:red" *ngIf="form.controls.email.hasError('pattern') && form.controls.email.touched">Email phải đúng định dạng và không được để trống!</p>
-  <p style="color:red" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email phải đúng định dạng và không được để trống!</p>
+  <p style="color:red" *ngIf="form.controls.email.hasError('pattern') && form.controls.email.touched">Email phải đúng định dạng!</p>
+  <p style="color:red" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email không được để trống!</p>
   <label>Password</label>
   <input type="password" formControlName="password"><br>
-  <p style="color:red" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Password không được để trống và phải dài hơn 6 ký tự!</p>
-  <p style="color:red" *ngIf="form.controls.password.hasError('pattern') && form.controls.password.touched">Password không được để trống và phải dài hơn 6 ký tự!</p>
+  <p style="color:red" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Password không được để trống!</p>
+  <p style="color:red" *ngIf="form.controls.password.hasError('pattern') && form.controls.password.touched">Password phải dài hơn 6 ký tự!</p>
   <label>Confirm Password</label>
   <input type="password" formControlName="confirmPassword"><br>
-  <p style="color:red" *ngIf="form.controls.confirmPassword.hasError('invalidPassword') && form.controls.confirmPassword.touched">Confirm Password không được để trống và phải dài hơn 6 ký tự!</p>
-  <p style="color:red" *ngIf="form.controls.confirmPassword.hasError('required') && form.controls.confirmPassword.touched">Confirm Password không được để trống và phải dài hơn 6 ký tự!</p>
+  <p style="color:red" *ngIf="form.hasError('confirmPassword') && form.touched">Confirm Password phải trùng với password!</p>
+<!--  <p style="color:red" *ngIf="form.controls.confirmPassword.hasError('required') && form.controls.confirmPassword.touched">Confirm Password không được để trống!</p>-->
+<!--  </div>-->
   <label for="country">Country</label>
   <select id="country" formControlName="country">
     <option [ngValue]="c.id" *ngFor="let c of countryList">
@@ -27,8 +29,6 @@
   <input type="radio" id="lgbt" value="LGBT">
   <label for="lgbt">LGBT</label>
   <br>
-  <p style="color:red" *ngIf="form.controls.confirmPassword.hasError('required') && form.controls.confirmPassword.touched">Confirm Password dài hơn 6 ký tự!</p>
-  <p style="color:red" *ngIf="form.controls.confirmPassword.hasError('pattern') && form.controls.confirmPassword.touched">Confirm Password không được để trống !</p>
   <label>Age</label>
   <input type="text" formControlName="age"><br>
   <p style="color:red" *ngIf="form.controls.age.hasError('min') && form.controls.age.touched">Bạn phải lớn hơn 18 tuổi!</p>
