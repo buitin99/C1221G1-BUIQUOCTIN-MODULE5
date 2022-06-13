@@ -29,4 +29,9 @@ export class FacilityCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  facilitySubmit() {
+    if (this.facilityForm.valid) {
+      this.submitFacility.emit(this.facilityForm.value);
+    }
+  }
 }

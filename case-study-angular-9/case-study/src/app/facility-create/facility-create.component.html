@@ -4,59 +4,81 @@
     <div class="col-3"></div>
     <div class="col-6">
       <h2 style="text-align: center">Create new Facility</h2>
-      <form >
+      <form [formGroup]="facilityForm" (ngSubmit)="facilitySubmit()">
         <!-- Name faclity input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example1">Name Facility</label>
-          <input type="text" id="form1Example1" class="form-control" />
+          <input type="text" id="form1Example1" class="form-control" formControlName="serviceName"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.serviceName.hasError('required') && facilityForm.controls.serviceName.touched">
+            Tên dịch vụ không được để trống</p>
         </div>
 
         <!-- Area input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example2">Area</label>
-          <input type="text" id="form1Example2" class="form-control" />
+          <input type="text" id="form1Example2" class="form-control" formControlName="serviceArea"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.serviceArea.hasError('required') && facilityForm.controls.serviceArea.touched">
+            Diện tích không được để trống</p>
         </div>
 
         <!-- Price input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example3">Price</label>
-          <input type="text" id="form1Example3" class="form-control" />
+          <input type="text" id="form1Example3" class="form-control" formControlName="serviceCost"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.serviceCost.hasError('required') && facilityForm.controls.serviceCost.touched">
+            Giá không được để trống</p>
         </div>
 
         <!-- Peoples input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example4">Peoples</label>
-          <input type="text" id="form1Example4" class="form-control" />
+          <input type="text" id="form1Example4" class="form-control" formControlName="serviceMaxPeople"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.serviceMaxPeople.hasError('required') && facilityForm.controls.serviceMaxPeople.touched">
+            số người không được để trống</p>
+
         </div>
 
         <!-- Standard input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example5">Standard</label>
-          <input type="text" id="form1Example5" class="form-control" />
+          <input type="text" id="form1Example5" class="form-control" formControlName="standardRoom"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.standardRoom.hasError('required') && facilityForm.controls.standardRoom.touched">
+            Tiêu chuẩn không được để trống</p>
         </div>
 
         <!-- Detail input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example6">Detail</label>
-          <input type="text" id="form1Example6" class="form-control" />
+          <input type="text" id="form1Example6" class="form-control" formControlName="descriptionOtherConvenience"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.descriptionOtherConvenience.hasError('required') && facilityForm.controls.descriptionOtherConvenience.touched">
+            Dịch vụ đi kèm không được để trống</p>
         </div>
 
         <!-- Pool Area input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example7">Pool Area</label>
-          <input type="text" id="form1Example7" class="form-control" />
+          <input type="text" id="form1Example7" class="form-control" formControlName="poolArea"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.poolArea.hasError('required') && facilityForm.controls.poolArea.touched">Diện
+            tích hồ bơi không được để trống</p>
         </div>
 
         <!-- Floor input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example8">Floor</label>
-          <input type="text" id="form1Example8" class="form-control" />
+          <input type="text" id="form1Example8" class="form-control" formControlName="numberOfFloor"/>
+          <p style="color: red"
+             *ngIf="facilityForm.controls.numberOfFloor.hasError('required') && facilityForm.controls.numberOfFloor.touched">
+            Số tầng không được để trống</p>
         </div>
-
-        <!-- TypeRent input -->
-        <div class="form-outline mb-3">
-          <label class="form-label" for="form1Example9">Floor</label>
-          <!--                    <input type="text" id="form1Example9" class="form-control" />-->
+        <div>
+          <!-- TypeRent input -->
           <select class="form-control"
                   id="rentType"
                   name="rentType" id="form1Example9">
@@ -70,8 +92,6 @@
 
         <!-- CodeService input -->
         <div class="form-outline mb-3">
-          <label class="form-label" for="form1Example10">Floor</label>
-          <!--                    <input type="text" id="form1Example8" class="form-control" />-->
           <select class="form-control"
                   id="codeService"
                   name="rentType" id="form1Example10">
