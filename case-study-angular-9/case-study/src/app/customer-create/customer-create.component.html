@@ -1,11 +1,27 @@
 <!--create-->
 
+<!--customerId: number;-->
+<!--customerName: string;-->
+<!--customerBirth: string;-->
+<!--customerGender: string;-->
+<!--customerIdCard: string;-->
+<!--customerPhone: string;-->
+<!--customerEmail: string;-->
+<!--customerAddress: string;-->
+<!--customerCode: string;-->
+<!--customerType: CustomerType;-->
 <div class="container">
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
       <h2 style="text-align: center">Create new Customer</h2>
-      <form>
+      <form [formGroup]="customerForm" (ngSubmit)="customerSubmit()">
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example10">Customer Code</label>
+          <input type="text" id="form1Example10" class="form-control" formControlName="customerCode" />
+          <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('pattern') && customerForm.controls.customerCode.touched">Nhập sai định dạng mã khách hàng</p>
+        </div>
         <!-- Name  input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example1">Customer Name</label>

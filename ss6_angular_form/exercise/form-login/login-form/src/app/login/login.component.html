@@ -1,0 +1,13 @@
+<h2>Form Register</h2>
+<form [formGroup]="form" (ngSubmit)="formRegister()">
+  <label>Email</label>
+  <input type="text" formControlName="email"><br>
+  <p style="color:red" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Email phải đúng định dạng!</p>
+  <p style="color:red" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email không được để trống!</p>
+  <label>Password</label>
+  <input type="password" formControlName="password"><br>
+  <p style="color:red" *ngIf="form.controls.password.hasError('minlength') && form.controls.password.touched">Password không được để trống và phải dài hơn 6 ký tự!</p>
+  <p style="color:red" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Password không được để trống và phải dài hơn 6 ký tự!</p>
+  <button type="submit">Submit</button>
+</form>
+

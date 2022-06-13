@@ -19,6 +19,7 @@ import { FacilityTypeComponent } from './facility/facility-type/facility-type.co
 import { RentTypeComponent } from './facility/rent-type/rent-type.component';
 import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
 import { ModalComponent } from './modal/modal.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ModalComponent } from './modal/modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
