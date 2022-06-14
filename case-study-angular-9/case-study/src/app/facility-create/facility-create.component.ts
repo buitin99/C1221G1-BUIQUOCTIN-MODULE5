@@ -30,6 +30,7 @@ export class FacilityCreateComponent implements OnInit {
   }
 
   facilitySubmit() {
+    console.log(this.facilityForm.value);
     if (this.facilityForm.valid) {
       this.submitFacility.emit(this.facilityForm.value);
     }
