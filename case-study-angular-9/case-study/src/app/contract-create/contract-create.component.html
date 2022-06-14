@@ -1,0 +1,74 @@
+<!--code: string;-->
+<!--customerName: Customer;-->
+<!--facilityDetail: FacilityDetail;-->
+<!--dateStart: string;-->
+<!--dateEnd: string;-->
+<!--deposit: number;-->
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <h2 style="text-align: center">Create new Contract</h2>
+      <form [formGroup]="contractForm" (ngSubmit)="contractSubmit()" >
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example10">Contract Code</label>
+          <input type="text" id="form1Example10" class="form-control" formControlName="code" />
+          <p style="color: red" *ngIf="contractForm.controls.code.hasError('pattern') && contractForm.controls.code.touched">Nhập sai định dạng mã hợp đồng</p>
+          <p style="color: red" *ngIf="contractForm.controls.code.hasError('required') && contractForm.controls.code.touched">Mã hợp đồng không được để trống</p>
+        </div>
+        <!-- Name  input -->
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example1">Customer Name</label>
+          <input type="text" id="form1Example1" class="form-control" formControlName="customerName"/>
+          <p style="color: red" *ngIf="contractForm.controls.customerName.hasError('required') && contractForm.controls.customerName.touched">Tên khách hàng không được để trống</p>
+        </div>
+
+        <!-- Start Date input -->
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example3">Start Date</label>
+          <input type="date" id="form1Example3" class="form-control" formControlName="dateStart" />
+          <p style="color: red" *ngIf="contractForm.controls.dateStart.hasError('pattern') && contractForm.controls.dateStart.touched">Nhập sai định dạng ngày</p>
+          <p style="color: red" *ngIf="contractForm.controls.dateStart.hasError('required') && contractForm.controls.dateStart.touched">Ngày không được để trống</p>
+        </div>
+
+        <!-- End Date input -->
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example3">End Date</label>
+          <input type="date" id="form1Example9" class="form-control" formControlName="dateEnd"/>
+                    <p style="color: red" *ngIf="contractForm.controls.dateEnd.hasError('pattern') && contractForm.controls.dateEnd.touched">Nhập sai định dạng ngày </p>
+                    <p style="color: red" *ngIf="contractForm.controls.dateEnd.hasError('required') && contractForm.controls.dateEnd.touched">Ngày không được để trống</p>
+        </div>
+
+        <!-- deposit  input -->
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example5">Deposit</label>
+          <input type="text" id="form1Example5" class="form-control" formControlName="deposit"/>
+          <p style="color: red" *ngIf="contractForm.controls.deposit.hasError('required') && contractForm.controls.deposit.touched">Đặt cọc không được để trống</p>
+        </div>
+
+      <div class="form-outline mb-3">
+        <label class="form-label" for="form1Example2">Attach</label>
+        <!--                    <input type="text" id="form1Example2" class="form-control" />-->
+        <select class="form-control"
+                id="customerType"
+                name="rentType" id="form1Example2">
+          <option value="null">Select Attach</option>
+          <option value="1">Buffer</option>
+          <option value="2">Karaoke</option>
+          <option value="3">Xe đạp</option>
+          <option value="4">Massage</option>
+          <option value="5">Tổ chức sinh nhật</option>
+        </select>
+      </div>
+
+
+      <!-- Submit button -->
+        <div class="container col-5">
+          <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
+        </div>
+      </form>
+      <h2 style="color: white">----</h2>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

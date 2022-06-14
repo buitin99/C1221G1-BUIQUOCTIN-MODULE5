@@ -20,6 +20,7 @@ import { RentTypeComponent } from './facility/rent-type/rent-type.component';
 import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
 import { ModalComponent } from './modal/modal.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ContractCreateComponent } from './contract-create/contract-create.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     FacilityTypeComponent,
     RentTypeComponent,
     FacilityDetailComponent,
-    ModalComponent
+    ModalComponent,
+    ContractCreateComponent
   ],
   imports: [
     BrowserModule,

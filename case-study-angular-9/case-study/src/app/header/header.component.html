@@ -18,7 +18,15 @@
             <a class="dropdown-item" [routerLink]="['/facility-create']">Create</a>
           </div>
         </li>
-        <li class="nav-item"><a [routerLink]="['/contract']"  class="nav-link">Contact</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-expanded="false">
+            Contract
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/contract']">List</a>
+            <a class="dropdown-item" [routerLink]="['/contract-create']">Create</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
             Customer
