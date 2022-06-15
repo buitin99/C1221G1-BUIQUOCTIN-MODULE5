@@ -47,5 +47,14 @@ export class CustomerService {
        this.customers[i] = customer;
       }
     }
+    this.getAll();
+  }
+
+  add(value: Customer) {
+    this.customers.push(value);
+  }
+
+  delete(idToDelete: number) {
+    this.customers = this.customers.filter(customer => customer.customerId !== idToDelete);
   }
 }

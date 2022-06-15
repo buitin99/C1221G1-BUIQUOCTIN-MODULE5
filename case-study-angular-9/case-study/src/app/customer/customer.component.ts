@@ -25,9 +25,10 @@ export class CustomerComponent implements OnInit {
   customerForm: FormGroup;
 
   customers: Customer[] = [];
+
   constructor(private customerService: CustomerService) {
     this.customerForm = new FormGroup({
-      customerCode: new FormControl('', [Validators.required, Validators.pattern( /^KH-\d{4}$/)]),
+      customerCode: new FormControl('', [Validators.required, Validators.pattern(/^KH-\d{4}$/)]),
       customerEmail: new FormControl('', [Validators.required, Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
       customerIdCard: new FormControl('', [Validators.required, Validators.pattern(/^\d{9}$/)]),
       customerBirth: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
@@ -45,4 +46,15 @@ export class CustomerComponent implements OnInit {
     this.customers = this.customerService.getAll();
   }
 
+  idToDelete: number;
+  nameToDelete: string;
+  showMessage(customerId: number, customerName: string) {
+    this.idToDelete = customerId;
+    this.nameToDelete = customerName;
+  }
+
+  deleteModal() {
+    this.customerService.delete(this.idToDelete);
+    this.ngOnInit();
+  }
 }
