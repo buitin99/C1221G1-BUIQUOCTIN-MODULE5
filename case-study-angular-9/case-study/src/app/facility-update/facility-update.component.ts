@@ -16,7 +16,8 @@ export class FacilityUpdateComponent implements OnInit {
   facilityEditForm: FormGroup;
   id: number;
 
-  constructor(private facilityService: FacilityService, private activatedRouter: ActivatedRoute) {
+  constructor(private facilityService: FacilityService, private activatedRouter: ActivatedRoute,
+              private router: Router) {
     this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) =>
       this.id = +  paramMap.get('serviceId'));
     const facility = this.getFacility(this.id);
@@ -48,7 +49,12 @@ export class FacilityUpdateComponent implements OnInit {
 
   updateFacility(id: number) {
     const facility = this.facilityEditForm.value;
-    this.facilityService.updateFacility(id, facility);
-    alert('Cập nhật thành công!');
+    if (this.facilityEditForm.valid){
+      this.facilityService.updateFacility(id, facility);
+      alert('Cập nhật thành công!');
+      this.router.navigateByUrl('facility');
+      // this.ngOnInit()
+    }
+    console.log(facility);
   }
 }

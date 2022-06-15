@@ -2,6 +2,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {RentType} from '../model/rent-type';
 import {FacilityType} from '../model/facility-type';
+import {FacilityService} from '../service/facility.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-facility-create',
@@ -13,7 +15,7 @@ export class FacilityCreateComponent implements OnInit {
   @Output() submitFacility = new EventEmitter();
   facilityForm: FormGroup;
 
-  constructor() {
+  constructor(private facilityService: FacilityService, private router: Router) {
     this.facilityForm = new FormGroup({
       serviceName: new FormControl('', [Validators.required]),
       serviceArea: new FormControl('', [Validators.required]),
@@ -33,6 +35,8 @@ export class FacilityCreateComponent implements OnInit {
     console.log(this.facilityForm.value);
     if (this.facilityForm.valid) {
       this.submitFacility.emit(this.facilityForm.value);
+      this.facilityService.add(this.facilityForm.value);
+      this.router.navigateByUrl('facility');
     }
   }
 }

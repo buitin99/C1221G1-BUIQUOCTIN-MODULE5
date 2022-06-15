@@ -52,4 +52,8 @@ export class FacilityService {
   delete(idToDelete: number) {
     this.facility = this.facility.filter(facility => facility.serviceId !== idToDelete);
   }
+
+  add(any: Facility) {
+     this.facility.push(any);
+  }
 }

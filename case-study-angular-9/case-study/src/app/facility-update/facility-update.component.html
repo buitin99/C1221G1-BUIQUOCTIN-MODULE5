@@ -109,7 +109,7 @@
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
-      <h2 style="text-align: center">Create new Facility</h2>
+      <h2 style="text-align: center">Edit Facility</h2>
       <form [formGroup]="facilityEditForm" (ngSubmit)="updateFacility(id)">
         <!-- Name faclity input -->
         <div class="form-outline mb-3">
@@ -171,7 +171,8 @@
           <label class="form-label" for="form1Example7">Pool Area</label>
           <input type="text" id="form1Example7" class="form-control" formControlName="poolArea"/>
           <p style="color: red"
-             *ngIf="facilityEditForm.controls.poolArea.hasError('required') && facilityEditForm.controls.poolArea.touched">Diện
+             *ngIf="facilityEditForm.controls.poolArea.hasError('required') && facilityEditForm.controls.poolArea.touched">
+            Diện
             tích hồ bơi không được để trống</p>
         </div>
 
@@ -183,19 +184,21 @@
              *ngIf="facilityEditForm.controls.numberOfFloor.hasError('required') && facilityEditForm.controls.numberOfFloor.touched">
             Số tầng không được để trống</p>
         </div>
-        <div>
-          <!-- TypeRent input -->
-          <select class="form-control"
-                  id="rentType"
-                  name="rentType" id="form1Example9">
-            <option value="null">Select Rent type</option>
-            <option value="1">Hour</option>
-            <option value="2">Day</option>
-            <option value="3">Month</option>
-            <option value="4">Year</option>
-          </select>
-        </div>
+        <br>
+                <div>
+                  <!-- TypeRent input -->
+                  <select class="form-control"
+                          id="rentType"
+                          name="rentType" id="form1Example9">
+                    <option value="null">Select Rent type</option>
+                    <option value="1">Hour</option>
+                    <option value="2">Day</option>
+                    <option value="3">Month</option>
+                    <option value="4">Year</option>
+                  </select>
+                </div>
 
+        <br>
         <!-- CodeService input -->
         <div class="form-outline mb-3">
           <select class="form-control"
@@ -211,7 +214,7 @@
 
         <!-- Submit button -->
         <div class="container col-5">
-          <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
+          <button type="submit" class="btn btn-info btn-block" style="width: 200px">Update Facility</button>
         </div>
       </form>
       <h2 style="color: white">----</h2>
