@@ -49,6 +49,6 @@ export class FacilityUpdateComponent implements OnInit {
   updateFacility(id: number) {
     const facility = this.facilityEditForm.value;
     this.facilityService.updateFacility(id, facility);
-    alert('Update thanh cong');
+    alert('Cập nhật thành công!');
   }
 }

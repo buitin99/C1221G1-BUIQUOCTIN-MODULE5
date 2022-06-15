@@ -41,11 +41,15 @@ export class FacilityService {
     return this.facility.find(f => f.serviceId === id);
   }
 
-  updateFacility(id: number, facility: any) {
+  updateFacility(id: number, f: Facility) {
     for (let i = 0; i < this.facility.length; i++) {
       if (this.facility[i].serviceId === id) {
-        this.facility[i] = facility;
+        this.facility[i] = f;
       }
     }
+  }
+
+  delete(idToDelete: number) {
+    this.facility = this.facility.filter(facility => facility.serviceId !== idToDelete);
   }
 }
