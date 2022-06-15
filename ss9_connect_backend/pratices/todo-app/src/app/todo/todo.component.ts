@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Todo} from '../todo';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from "@angular/common/http";
 
 let _id = 1;
 
@@ -14,7 +13,7 @@ export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   content = new FormControl();
 
-  constructor(private httpClient: HttpClient) {
+  constructor() {
   }
 
   ngOnInit() {

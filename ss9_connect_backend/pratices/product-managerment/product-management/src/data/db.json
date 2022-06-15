@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phone"
+    },
+    {
+      "id": 2,
+      "name": "LapTop"
+    },
+    {
+      "id": 3,
+      "name": "New Laptop"
+    },
+    {
+      "id": 4,
+      "name": "New Phone"
+    },
+    {
+      "name": "tin",
+      "id": 5
+    }
+  ]
+}
