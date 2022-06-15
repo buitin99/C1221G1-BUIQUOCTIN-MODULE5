@@ -1,19 +1,49 @@
 {
-  "posts": [
+  "todos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "content": "tap ta",
+      "complete": false
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "content": "tap gym",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "content": "tap the duc",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "content": "tap erobic",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "content": "tap hit dat",
+      "complete": false
+    },
+    {
+      "content": "tap hit xa",
+      "complete": false,
+      "id": 6
+    },
+    {
+      "content": "tap boi",
+      "complete": false,
+      "id": 7
+    },
+    {
+      "content": "tap da banh",
+      "complete": false,
+      "id": 8
+    },
+    {
+      "content": "tap choi dan",
+      "complete": false,
+      "id": 9
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
