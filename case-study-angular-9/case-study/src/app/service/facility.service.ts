@@ -7,7 +7,7 @@ import {FacilityType} from '../model/facility-type';
   providedIn: 'root'
 })
 export class FacilityService {
-  facilitys: Facility[] = [{serviceId: 1, serviceName: 'Villa-Vip', serviceArea: 200
+  facility: Facility[] = [{serviceId: 1, serviceName: 'Villa-Vip', serviceArea: 200
     , serviceCost: 500, serviceMaxPeople: 5, standardRoom: 'Vip', descriptionOtherConvenience: 'Tivi + Tủ lạnh', poolArea: 200,
     numberOfFloor: 3, facilityType: {
     id: 1,
@@ -34,8 +34,18 @@ export class FacilityService {
   constructor() { }
 
   getAll() {
-    return this.facilitys;
+    return this.facility;
   }
 
+  findById(id: number) {
+    return this.facility.find(f => f.serviceId === id);
+  }
 
+  updateFacility(id: number, facility: any) {
+    for (let i = 0; i < this.facility.length; i++) {
+      if (this.facility[i].serviceId === id) {
+        this.facility[i] = facility;
+      }
+    }
+  }
 }

@@ -31,7 +31,7 @@
         <td class="col-1">{{c.customerAddress}}</td>
         <td class="col-1">{{c.customerType.type}}</td>
         <div>
-          <a [routerLink]="['/customer-update']"  style="float: left" class="btn btn-warning">Update</a>
+          <a [routerLink]="['/customer-update',c.customerId]"  style="float: left" class="btn btn-warning">Update</a>
           <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                   data-toggle="modal"
                   onclick="deleteCustomer(1,'1')">Delete

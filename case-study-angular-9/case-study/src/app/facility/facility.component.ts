@@ -9,7 +9,7 @@ import {FacilityService} from '../service/facility.service';
 })
 export class FacilityComponent implements OnInit {
 
-  facilitys: Facility[] = [];
+  facility: Facility[] = [];
 
   constructor(private facilityService: FacilityService) { }
 
@@ -18,6 +18,6 @@ export class FacilityComponent implements OnInit {
   }
 
   getAll() {
-    this.facilitys = this.facilityService.getAll();
+    this.facility = this.facilityService.getAll();
   }
 }

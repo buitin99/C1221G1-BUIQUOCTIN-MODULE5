@@ -1,15 +1,32 @@
-<!--update-->
+<!--create-->
 
+<!--customerId: number;-->
+<!--customerName: string;-->
+<!--customerBirth: string;-->
+<!--customerGender: string;-->
+<!--customerIdCard: string;-->
+<!--customerPhone: string;-->
+<!--customerEmail: string;-->
+<!--customerAddress: string;-->
+<!--customerCode: string;-->
+<!--customerType: CustomerType;-->
 <div class="container">
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
       <h2 style="text-align: center">Edit Customer</h2>
-      <form>
+      <form [formGroup]="customerEditForm" (ngSubmit)="updateCustomer(id)">
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form1Example10">Customer Code</label>
+          <input type="text" id="form1Example10" class="form-control" formControlName="customerCode" />
+          <p style="color: red" *ngIf="customerEditForm.controls.customerCode.hasError('pattern') && customerEditForm.controls.customerCode.touched">Nhập sai định dạng mã khách hàng</p>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerCode.hasError('required') && customerEditForm.controls.customerCode.touched">Mã khách hàng không được để trống</p>
+        </div>
         <!-- Name  input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example1">Customer Name</label>
-          <input type="text" id="form1Example1" class="form-control" />
+          <input type="text" id="form1Example1" class="form-control" formControlName="customerName" />
+          <p style="color: red" *ngIf="customerEditForm.controls.customerName.hasError('required') && customerEditForm.controls.customerName.touched">Tên khách hàng không được để trống</p>
         </div>
 
         <!-- Type input -->
@@ -31,7 +48,9 @@
         <!-- DOB input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example3">DOB</label>
-          <input type="date" id="form1Example3" class="form-control" />
+          <input type="date" id="form1Example3" class="form-control" formControlName="customerBirth"/>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerBirth.hasError('pattern') && customerEditForm.controls.customerBirth.touched">Nhập sai định dạng Ngày sinh</p>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerBirth.hasError('required') && customerEditForm.controls.customerBirth.touched">Ngày sinh không được để trống</p>
         </div>
 
         <!-- Peoples input -->
@@ -43,29 +62,36 @@
         <!-- ID Card input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example5">ID Card</label>
-          <input type="text" id="form1Example5" class="form-control" />
+          <input type="text" id="form1Example5" class="form-control" formControlName="customerIdCard"/>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerIdCard.hasError('pattern') && customerEditForm.controls.customerIdCard.touched">Nhập sai định dạng số cmnd</p>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerIdCard.hasError('required') && customerEditForm.controls.customerIdCard.touched">cmnd không được để trống</p>
         </div>
 
         <!-- Phone input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example6">Phone</label>
-          <input type="text" id="form1Example6" class="form-control" />
+          <input type="text" id="form1Example6" class="form-control" formControlName="customerPhone"/>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerPhone.hasError('pattern') && customerEditForm.controls.customerPhone.touched">Nhập sai định dạng số điện thoại</p>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerPhone.hasError('required') && customerEditForm.controls.customerPhone.touched">số điện thoại không được để trống</p>
         </div>
 
         <!-- Email input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example7">Email</label>
-          <input type="text" id="form1Example7" class="form-control" />
+          <input type="text" id="form1Example7" class="form-control" formControlName="customerEmail"/>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerEmail.hasError('email') && customerEditForm.controls.customerEmail.touched">Nhập sai định dạng email</p>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerEmail.hasError('required') && customerEditForm.controls.customerEmail.touched">email không được để trống</p>
         </div>
 
         <!-- Address input -->
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example8">Address</label>
-          <input type="text" id="form1Example8" class="form-control" />
+          <input type="text" id="form1Example8" class="form-control" formControlName="customerAddress"/>
+          <p style="color: red" *ngIf="customerEditForm.controls.customerAddress.hasError('required') && customerEditForm.controls.customerAddress.touched">địa chỉ không được để trống</p>
         </div>
         <!-- Submit button -->
         <div class="container col-5">
-          <button type="submit" class="btn btn-info btn-block" style="width: 200px">Create New Facility</button>
+          <button type="submit" class="btn btn-info btn-block" style="width: 200px">Update Customer</button>
         </div>
       </form>
       <h2 style="color: white">----</h2>
@@ -73,4 +99,4 @@
     <div class="col-3"></div>
   </div>
 </div>
-<!--update-->
+<!--create-->

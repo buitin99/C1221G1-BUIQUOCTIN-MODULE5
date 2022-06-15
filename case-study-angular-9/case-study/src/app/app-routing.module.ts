@@ -16,10 +16,9 @@ const routes: Routes = [
   {path: 'home-page', component: HomePageComponent},
   {path: 'customer', component: CustomerComponent},
   {path: 'customer-create', component: CustomerCreateComponent},
-  {path: 'customer-update', component: CustomerUpdateComponent},
-  {path: 'customer-update', component: CustomerUpdateComponent},
+  {path: 'customer-update/:customerId', component: CustomerUpdateComponent},
   {path: 'facility-create', component: FacilityCreateComponent},
-  {path: 'facility-update', component: FacilityUpdateComponent},
+  {path: 'facility-update/:serviceId', component: FacilityUpdateComponent},
   {path: 'contract', component: ContractComponent},
   {path: 'contract-create', component: ContractCreateComponent},
   {path: 'facility', component: FacilityComponent}];

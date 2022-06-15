@@ -1,7 +1,7 @@
 <h2 style="text-align: center">Facility List</h2>
 <div class="container">
   <div class="row">
-    <div class="col-4" *ngFor="let f of facilitys">
+    <div class="col-4" *ngFor="let f of facility">
       <div class="card" style="width: 18rem;">
         <img src="../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -15,7 +15,7 @@
           <p>Floor : {{f.numberOfFloor}}</p>
           <p>Floor : {{f.numberOfFloor}}</p>
           <div>
-            <a [routerLink]="['/facility-update']" class="btn btn-warning" style="float: left">Update</a>
+            <a [routerLink]="['/facility-update',f.serviceId]" class="btn btn-warning" style="float: left">Update</a>
             <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                     data-toggle="modal"
                     onclick="deleteCustomer(1,'1')">Delete
