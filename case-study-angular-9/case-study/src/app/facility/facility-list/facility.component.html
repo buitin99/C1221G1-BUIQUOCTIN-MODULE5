@@ -80,7 +80,7 @@
   <div class="row">
     <div class="col-4" *ngFor="let f of facility">
       <div class="card" style="width: 18rem;">
-        <img src="../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
+        <img src="../../../assets/images/insta-4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{f.serviceName}}</h5>
           <p>Area : {{f.serviceArea}}</p>
@@ -92,7 +92,7 @@
           <p>Floor : {{f.numberOfFloor}}</p>
           <p>Floor : {{f.numberOfFloor}}</p>
           <div>
-            <a [routerLink]="['/facility-update',f.serviceId]" class="btn btn-warning" style="float: left">Update</a>
+            <a [routerLink]="['/facility/update',f.serviceId]" class="btn btn-warning" style="float: left">Update</a>
             <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                     data-toggle="modal"
                     (click)="showMessage(f.serviceId,f.serviceName)">Delete

@@ -1,8 +1,10 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Customer} from '../model/customer';
-import {CustomerService} from '../service/customer.service';
+import {Customer} from '../../model/customer';
+import {CustomerService} from '../../service/customer.service';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
-import {CustomerType} from '../model/customer-type';
+import {CustomerType} from '../../model/customer-type';
+import {RentTypeService} from '../../service/rent-type.service';
+import {CustomerTypeService} from '../../service/customer-type.service';
 
 // <!--customerId: number;-->
 // <!--customerName: string;-->
@@ -25,8 +27,10 @@ export class CustomerComponent implements OnInit {
   customerForm: FormGroup;
 
   customers: Customer[] = [];
+  customerType: CustomerType[] = [];
 
-  constructor(private customerService: CustomerService) {
+  constructor(private customerService: CustomerService,
+              private customerTypeService: CustomerTypeService) {
     this.customerForm = new FormGroup({
       customerCode: new FormControl('', [Validators.required, Validators.pattern(/^KH-\d{4}$/)]),
       customerEmail: new FormControl('', [Validators.required, Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
@@ -57,4 +61,6 @@ export class CustomerComponent implements OnInit {
     this.customerService.delete(this.idToDelete);
     this.ngOnInit();
   }
+
+
 }

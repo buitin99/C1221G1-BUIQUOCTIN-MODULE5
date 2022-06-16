@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37dfa1eb-ef8c-4008-a9c6-a2389885b7aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/wfda-angular-product-management-connect-backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/workspace.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2AdWaR07O2G7XOWjUvHAcyYV2Rm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="D:\codegym\module5\ss9_connect_backend\pratices\product-managerment\product-management\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37dfa1eb-ef8c-4008-a9c6-a2389885b7aa" name="Default Changelist" comment="" />
+      <created>1655340005807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655340005807</updated>
+      <workItem from="1655340007204" duration="30000" />
+      <workItem from="1655341350502" duration="558000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -16,12 +16,23 @@
           <p style="color: red" *ngIf="contractForm.controls.code.hasError('pattern') && contractForm.controls.code.touched">Nhập sai định dạng mã hợp đồng</p>
           <p style="color: red" *ngIf="contractForm.controls.code.hasError('required') && contractForm.controls.code.touched">Mã hợp đồng không được để trống</p>
         </div>
-        <!-- Name  input -->
-        <div class="form-outline mb-3">
-          <label class="form-label" for="form1Example1">Customer Name</label>
-          <input type="text" id="form1Example1" class="form-control" formControlName="customerName"/>
-          <p style="color: red" *ngIf="contractForm.controls.customerName.hasError('required') && contractForm.controls.customerName.touched">Tên khách hàng không được để trống</p>
+<!--        &lt;!&ndash; Name  input &ndash;&gt;-->
+<!--        <div class="form-outline mb-3">-->
+<!--          <label class="form-label" for="form1Example1">Customer Name</label>-->
+<!--          <input type="text" id="form1Example1" class="form-control" formControlName="customerName"/>-->
+<!--          <p style="color: red" *ngIf="contractForm.controls.customerName.hasError('required') && contractForm.controls.customerName.touched">Tên khách hàng không được để trống</p>-->
+<!--        </div>-->
+
+        <div>
+          <label >Choose Customer</label>
+          <!-- TypeRent input -->
+          <select  formControlName="customerName" class="form-control"
+          >
+            <!--            <option disabled selected value="">Choose Facility Type</option>-->
+            <option *ngFor="let c of customer" [ngValue]="c" >{{c.customerName}}</option>
+          </select>
         </div>
+        <br>
 
         <!-- Start Date input -->
         <div class="form-outline mb-3">
@@ -46,21 +57,16 @@
           <p style="color: red" *ngIf="contractForm.controls.deposit.hasError('required') && contractForm.controls.deposit.touched">Đặt cọc không được để trống</p>
         </div>
 
-      <div class="form-outline mb-3">
-        <label class="form-label" for="form1Example2">Attach</label>
-        <!--                    <input type="text" id="form1Example2" class="form-control" />-->
-        <select class="form-control"
-                id="customerType"
-                name="rentType" id="form1Example2">
-          <option value="null">Select Attach</option>
-          <option value="1">Buffer</option>
-          <option value="2">Karaoke</option>
-          <option value="3">Xe đạp</option>
-          <option value="4">Massage</option>
-          <option value="5">Tổ chức sinh nhật</option>
-        </select>
-      </div>
-
+        <div>
+          <label >Choose Facility Type</label>
+          <!-- TypeRent input -->
+          <select  formControlName="facilityDetail" class="form-control"
+          >
+<!--            <option disabled selected value="">Choose Facility Type</option>-->
+            <option *ngFor="let f of facility" [ngValue]="f" >{{f.type}}</option>
+          </select>
+        </div>
+        <br>
 
       <!-- Submit button -->
         <div class="container col-5">

@@ -79,26 +79,20 @@
         </div>
         <div>
           <!-- TypeRent input -->
-          <select class="form-control"
-                  id="rentType"
-                  name="rentType" id="form1Example9">
-            <option value="null">Select Rent type</option>
-            <option value="1">Hour</option>
-            <option value="2">Day</option>
-            <option value="3">Month</option>
-            <option value="4">Year</option>
+          <select  formControlName="rentType" class="form-control"
+          >
+            <option disabled selected value="">Choose Rent Type</option>
+            <option *ngFor="let r of rentType" [ngValue]="r" >{{r.type}}</option>
           </select>
         </div>
         <br>
         <!-- CodeService input -->
-        <div class="form-outline mb-3">
-          <select class="form-control"
-                  id="codeService"
-                  name="rentType" id="form1Example10">
-            <option value="null">Select Code service</option>
-            <option value="1">Villa</option>
-            <option value="2">House</option>
-            <option value="3">Room</option>
+        <div>
+          <!-- TypeRent input -->
+          <select  formControlName="facilityDetail" class="form-control"
+          >
+            <option disabled selected value="">Choose Facility Type</option>
+            <option *ngFor="let f of facility" [ngValue]="f" >{{f.type}}</option>
           </select>
         </div>
 

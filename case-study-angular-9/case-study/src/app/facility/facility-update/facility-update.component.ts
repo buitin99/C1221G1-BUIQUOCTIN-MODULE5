@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {FacilityService} from '../service/facility.service';
+import {FacilityService} from '../../service/facility.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {RentType} from '../model/rent-type';
-import {FacilityType} from '../model/facility-type';
+import {RentType} from '../../model/rent-type';
+import {FacilityType} from '../../model/facility-type';
 import {log} from 'util';
-import {Facility} from '../model/facility';
+import {Facility} from '../../model/facility';
 
 @Component({
   selector: 'app-facility-update',

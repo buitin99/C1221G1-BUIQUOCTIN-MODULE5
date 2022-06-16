@@ -30,18 +30,29 @@
         </div>
 
         <!-- Type input -->
+<!--        <div class="form-outline mb-3">-->
+<!--          <label class="form-label" for="form1Example2">Type customer</label>-->
+<!--          &lt;!&ndash;                    <input type="text" id="form1Example2" class="form-control" />&ndash;&gt;-->
+<!--          <select class="form-control"-->
+<!--                  id="customerType"-->
+<!--                  name="rentType" id="form1Example2">-->
+<!--            <option value="null">Select Customer type</option>-->
+<!--            <option value="1">Diamond</option>-->
+<!--            <option value="2">Platinium</option>-->
+<!--            <option value="3">Gold</option>-->
+<!--            <option value="4">Silver</option>-->
+<!--            <option value="5">Member</option>-->
+<!--          </select>-->
+<!--        </div>-->
+
         <div class="form-outline mb-3">
           <label class="form-label" for="form1Example2">Type customer</label>
           <!--                    <input type="text" id="form1Example2" class="form-control" />-->
-          <select class="form-control"
+          <select class="form-control" formControlName="customerType"
                   id="customerType"
-                  name="rentType" id="form1Example2">
-            <option value="null">Select Customer type</option>
-            <option value="1">Diamond</option>
-            <option value="2">Platinium</option>
-            <option value="3">Gold</option>
-            <option value="4">Silver</option>
-            <option value="5">Member</option>
+                  name="customerType" id="form1Example2">
+            <option disabled selected value="">Customer Type</option>
+            <option [ngValue]="type" *ngFor="let type of customerTypes">{{type.type}}</option>
           </select>
         </div>
 
