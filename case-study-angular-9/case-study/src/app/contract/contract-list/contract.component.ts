@@ -20,6 +20,9 @@ export class ContractComponent implements OnInit {
   }
 
   getAll() {
-    return this.contracts = this.contractService.getAll();
+    // return this.contracts = this.contractService.getAll();
+    this.contractService.getAll().subscribe(contract => {
+      this.contracts = contract;
+    })
   }
 }

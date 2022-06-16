@@ -22,6 +22,7 @@ import { ModalComponent } from './modal/modal.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
 import { DeleteFacilityComponent } from './model/delete-facility/delete-facility.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DeleteFacilityComponent } from './model/delete-facility/delete-facility
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

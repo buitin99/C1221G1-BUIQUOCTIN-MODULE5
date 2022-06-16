@@ -8,41 +8,41 @@
     {
       "id": 2,
       "content": "tap gym",
-      "complete": false
+      "complete": true
     },
     {
       "id": 3,
       "content": "tap the duc",
-      "complete": false
+      "complete": true
     },
     {
       "id": 4,
       "content": "tap erobic",
-      "complete": false
+      "complete": true
     },
     {
       "id": 5,
       "content": "tap hit dat",
-      "complete": false
+      "complete": true
     },
     {
       "content": "tap hit xa",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
       "content": "tap boi",
-      "complete": false,
+      "complete": true,
       "id": 7
     },
     {
       "content": "tap da banh",
-      "complete": false,
+      "complete": true,
       "id": 8
     },
     {
       "content": "tap choi dan",
-      "complete": false,
+      "complete": true,
       "id": 9
     }
   ]

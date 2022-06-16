@@ -19,19 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37dfa1eb-ef8c-4008-a9c6-a2389885b7aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer-create/customer-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/customer/customer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study-angular-9/case-study/src/app/facility-create/facility-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/wfda-angular-product-management-connect-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wfda-angular-product-management-connect-backend/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="37dfa1eb-ef8c-4008-a9c6-a2389885b7aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +59,7 @@
       <updated>1655340005807</updated>
       <workItem from="1655340007204" duration="30000" />
       <workItem from="1655341350502" duration="558000" />
+      <workItem from="1655350487636" duration="36000" />
     </task>
     <servers />
   </component>

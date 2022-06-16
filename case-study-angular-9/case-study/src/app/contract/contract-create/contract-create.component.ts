@@ -41,8 +41,16 @@ export class ContractCreateComponent implements OnInit {
   contractSubmit() {
     if (this.contractForm.valid) {
       this.submitContract.emit(this.contractForm.value);
-      this.contractService.add(this.contractForm.value);
-      this.router.navigateByUrl('contract');
+      // this.contractService.add(this.contractForm.value);
+      const contract = this.contractForm.value;
+      this.contractService.add(contract).subscribe(() => {
+        this.contractForm.reset();
+        alert('Tạo thành công');
+      },error => {
+        console.log(error);
+      })
+      this.router.navigateByUrl('contract/list');
+      this.ngOnInit();
     }
   }
 }
