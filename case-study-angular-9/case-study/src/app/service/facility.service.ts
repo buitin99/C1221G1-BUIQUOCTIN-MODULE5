@@ -37,8 +37,7 @@ export class FacilityService {
   //       type: 'Year'
   //     }}];
   constructor(private http: HttpClient) { }
-
-  // @ts-ignore
+  //
   getAll(): Observable<Facility[]>  {
     // return this.facility;
     return this.http.get<Facility[]>(API_URL + '/facilities');

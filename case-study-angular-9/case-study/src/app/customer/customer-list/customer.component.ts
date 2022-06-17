@@ -54,6 +54,7 @@ export class CustomerComponent implements OnInit {
 
     });
     console.log(this.customers);
+    this.getAll();
   }
 
   getAll() {
@@ -75,12 +76,12 @@ export class CustomerComponent implements OnInit {
 
   deleteModal() {
     this.customerService.delete(this.idToDelete).subscribe(() => {
-      // @ts-ignore
-      this.router.navigateByUrl(['/customers/list']);
+      this.router.navigateByUrl('/customer/list');
     }, error => {
       console.log(error);
     });
     this.ngOnInit();
+    this.getAll();
   }
 
   search() {

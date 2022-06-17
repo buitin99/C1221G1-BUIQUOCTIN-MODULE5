@@ -1,14 +1,14 @@
 {
   "customers": [
     {
-      "customerCode": "KH-0001",
+      "customerCode": "KH-0002",
       "customerName": "Bùi Quốc Tín",
       "customerPhone": "0123456789",
-      "customerAddress": "DaNang2",
+      "customerAddress": "DaNang23",
       "customerEmail": "buiquoctin@gmail.com",
       "customerType": {
-        "id": 1,
-        "type": "Diamond"
+        "id": 2,
+        "type": "Platinum"
       },
       "customerIdCard": "4523857462",
       "customerBirth": "1999-01-01",
@@ -29,17 +29,17 @@
       "id": 2
     },
     {
-      "customerCode": "KH-1222",
-      "customerName": "z",
+      "customerCode": "KH-1234",
+      "customerName": "Bùi Quốc Tín",
       "customerPhone": "0901234564",
       "customerIdCard": "123123123",
       "customerEmail": "123@gmail.com",
-      "customerAddress": "123",
+      "customerAddress": "DaNang2",
       "customerType": {
         "id": 2,
         "type": "Platinum"
       },
-      "customerBirth": "2022-06-30",
+      "customerBirth": "2022-06-07",
       "id": 3
     }
   ],
@@ -173,6 +173,31 @@
       },
       "deposit": "1000",
       "id": 5
+    },
+    {
+      "code": "HD-1221",
+      "customerName": {
+        "customerCode": "KH-0002",
+        "customerName": "Bùi Quốc Tín",
+        "customerPhone": "0123456789",
+        "customerAddress": "DaNang23",
+        "customerEmail": "buiquoctin@gmail.com",
+        "customerType": {
+          "id": 2,
+          "type": "Platinum"
+        },
+        "customerIdCard": "4523857462",
+        "customerBirth": "1999-01-01",
+        "id": 1
+      },
+      "dateStart": "2022-06-22",
+      "dateEnd": "2022-06-24",
+      "facilityDetail": {
+        "id": 2,
+        "type": "Karaoke"
+      },
+      "deposit": "1000",
+      "id": 6
     }
   ],
   "facilities": [
@@ -223,14 +248,11 @@
       "descriptionOtherConvenience": "12",
       "poolArea": "12",
       "rentType": {
-        "id": 1,
-        "type": "Day"
-      },
-      "facilityDetail": {
         "id": 2,
-        "type": "Karaoke"
+        "type": "Month"
       },
-      "numberOfFloor": "12",
+      "facilityDetail": null,
+      "numberOfFloor": "14",
       "id": 3
     }
   ]

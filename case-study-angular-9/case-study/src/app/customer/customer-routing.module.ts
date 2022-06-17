@@ -8,7 +8,7 @@ import {CustomerUpdateComponent} from './customer-update/customer-update.compone
 const routes: Routes = [
   {path: 'list', component: CustomerComponent},
   {path: 'create', component: CustomerCreateComponent},
-  {path: 'update/:customerId', component: CustomerUpdateComponent},];
+  {path: 'update/:id', component: CustomerUpdateComponent},];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

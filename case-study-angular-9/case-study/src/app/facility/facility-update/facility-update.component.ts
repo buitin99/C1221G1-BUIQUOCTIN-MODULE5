@@ -49,8 +49,8 @@ export class FacilityUpdateComponent implements OnInit {
         standardRoom: new FormControl(facility.standardRoom, [Validators.required]),
         descriptionOtherConvenience: new FormControl(facility.descriptionOtherConvenience, [Validators.required]),
         poolArea: new FormControl(facility.poolArea, [Validators.required]),
-        rentType: new FormControl(facility.rentType, [Validators.required]),
-        facilityDetail: new FormControl(facility.facilityType, [Validators.required]),
+        rentType: new FormControl(facility.rentType),
+        facilityDetail: new FormControl(facility.facilityType),
         numberOfFloor: new FormControl(facility.numberOfFloor, [Validators.required])
       });
     });

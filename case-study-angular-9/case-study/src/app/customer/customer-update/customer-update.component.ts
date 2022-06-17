@@ -5,6 +5,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
 import {CustomerType} from '../../model/customer-type';
+import {combineAll} from 'rxjs/operators';
 
 @Component({
   selector: 'app-customer-update',
@@ -20,7 +21,7 @@ export class CustomerUpdateComponent implements OnInit {
               private customerTypeService: CustomerTypeService
   ,private router: Router) {
     this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) =>
-      this.id = +paramMap.get('customerId'));
+      this.id = +paramMap.get('id'));
     const customer = this.getCustomer(this.id);
     console.log(customer);
     // this.customerEditForm = new FormGroup({
@@ -63,10 +64,15 @@ export class CustomerUpdateComponent implements OnInit {
     const customer = this.customerEditForm.value;
     this.customerService.updateCustomer(id,customer).subscribe(() => {
       alert('Cập nhật thành công');
+      this.ngOnInit();
+      this.router.navigateByUrl('/customer/list');
     },error => {
       console.log(error);
+    }, () => {
+      this.ngOnInit();
     })
-    this.ngOnInit();
+
   }
+
 
 }

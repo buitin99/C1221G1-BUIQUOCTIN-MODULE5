@@ -70,7 +70,7 @@ export class CustomerService {
     return this.http.delete<Customer>(`${API_URL}/customers/${id}`);
   }
 
-  // @ts-ignore
+
   search(value: any, value2: any, value3: any): Observable<Customer[]> {
     return this.http.get<Customer[]>(`${API_URL}/customers?customerName_like=${value}&customerPhone_like=${value2}&customerType.type_like=${value3}`);
   }
