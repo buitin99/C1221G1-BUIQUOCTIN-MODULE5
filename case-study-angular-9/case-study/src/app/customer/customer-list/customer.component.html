@@ -5,11 +5,41 @@
     <table class="table align-middle mb-0 bg-white">
       <thead class="bg-light">
       <tr>
-<!--        <th class="col-1">Id</th>-->
+        <p class="mt-3">Searching customer </p>
+        <div class="form-inline my-lg-3">
+          <div class="row">
+            <div class="col">
+              <input class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search"
+                     name="keySearch1" id="keySearch1" #keySearch1>
+            </div>
+            <div class="col">
+              <input class="form-control mr-sm-2" type="search" placeholder="Phone" aria-label="Search"
+                     name="keySearch2" id="keySearch2" #keySearch2>
+            </div>
+
+            <div class="col">
+              <select
+                      class="form-control" name="keySearch3" id="keySearch3" #keySearch3>
+                <option value="">Select customerType</option>
+                <option value="Diamond"> Diamond</option>
+                <option value="Platinum"> Platinum</option>
+                <option value="Gold"> Gold</option>
+                <option value="Silver"> Silver</option>
+                <option value="Member"> Member</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <button (click)="search()" class="btn btn-outline-success my-2 my-sm-7" type="submit">Search</button>
+          </div>
+        </div>
+      </tr>
+      <tr>
+        <!--        <th class="col-1">Id</th>-->
         <th class="col-2">#</th>
         <th class="col-2">Code</th>
         <th class="col-2">Name</th>
-<!--        <th class="col-1">Gender</th>-->
+        <!--        <th class="col-1">Gender</th>-->
         <th class="col-2">DOB</th>
         <!--        <th class="col-1">IDCard</th>-->
         <!--        <th class="col-1">Phone</th>-->
@@ -20,12 +50,12 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of customers; index as i">
-        <td class="col-2" >{{i + 1}}</td>
-<!--        <td class="col-1">{{c.customerId}}</td>-->
+      <tr *ngFor="let c of customers|paginate : { itemsPerPage: 1, currentPage: p}; index as i">
+        <td class="col-2">{{i + 1}}</td>
+        <!--        <td class="col-1">{{c.customerId}}</td>-->
         <td class="col-2">{{c.customerCode}}</td>
         <td class="col-2">{{c.customerName}}</td>
-<!--        <td class="col-1">{{c.customerGender}}</td>-->
+        <!--        <td class="col-1">{{c.customerGender}}</td>-->
         <td class="col-2">{{c.customerBirth}}</td>
         <!--        <td class="col-1">{{c.customerIdCard}}</td>-->
         <!--        <td class="col-1">{{c.customerPhone}}</td>-->
@@ -33,7 +63,7 @@
         <td class="col-1">{{c.customerAddress}}</td>
         <td class="col-1">{{c.customerType.type}}</td>
         <div>
-          <a [routerLink]="['/customer/update',c.id]"  style="float: left" class="btn btn-warning">Update</a>
+          <a [routerLink]="['/customer/update',c.id]" style="float: left" class="btn btn-warning">Update</a>
           <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                   data-toggle="modal"
                   (click)="showMessage(c.id,c.customerName)">Delete
@@ -43,108 +73,14 @@
       </tr>
       </tbody>
     </table>
+    <div style="justify-content: space-around;" class="mx-auto">
+      <div>
+        <pagination-controls (pageChange)="p = $event" class=" page-item"></pagination-controls>
+      </div>
+    </div>
   </div>
 </div>
 
-<!--table-->
-<!--&lt;!&ndash;create&ndash;&gt;-->
-<!--<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"-->
-<!--     aria-hidden="true">-->
-<!--  <div class="modal-dialog" role="document">-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header text-center">-->
-<!--        <h4 class="modal-title w-100 font-weight-bold">Create New Customer</h4>-->
-<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--          <span aria-hidden="true">&times;</span>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      <div class="modal-body mx-3">-->
-<!--        <div class="form-outline">-->
-<!--          <label class="form-label" for="form12">Full name</label>-->
-<!--          <input type="text" id="form12" class="form-control"/>-->
-<!--        </div>-->
-
-<!--        <div class="md-form mb-5">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">Type Customer</label>-->
-<!--            &lt;!&ndash;                        <input type="text" id="form11" class="form-control" />&ndash;&gt;-->
-<!--            <select id="customerTypeId"-->
-<!--                    class="form-control">-->
-<!--              &lt;!&ndash;                                onchange="showFacilityType()">&ndash;&gt;-->
-
-<!--              <option value="null">Select Customer type</option>-->
-<!--              <option value="1">Diamond</option>-->
-<!--              <option value="2">Platinium</option>-->
-<!--              <option value="3">Gold</option>-->
-<!--              <option value="4">Silver</option>-->
-<!--              <option value="">Member</option>-->
-<!--            </select>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form mb-5">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">DOB</label>-->
-<!--            <input type="date" id="form10" class="form-control"/>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form mb-5">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">Gender</label>-->
-<!--            &lt;!&ndash;                        <input type="text" id="form9" class="form-control" />&ndash;&gt;-->
-<!--            <select id="customerGender"-->
-<!--                    class="form-control">-->
-<!--              &lt;!&ndash;                                onchange="showFacilityType()">&ndash;&gt;-->
-
-<!--              <option value="null">Select Gender</option>-->
-<!--              <option value="1">Male</option>-->
-<!--              <option value="2">Female</option>-->
-<!--              <option value="">None</option>-->
-<!--            </select>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form mb-5">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">ID Card</label>-->
-<!--            <input type="text" id="form7" class="form-control"/>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">Phone</label>-->
-<!--            <input type="text" id="form6" class="form-control"/>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">Email</label>-->
-<!--            <input type="text" id="form5" class="form-control"/>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="md-form">-->
-<!--          <div class="form-outline">-->
-<!--            <label class="form-label" for="form12">Address</label>-->
-<!--            <input type="text" id="form4" class="form-control"/>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--      <div class="modal-footer d-flex justify-content-center">-->
-<!--        <button class="btn btn-info">Send <i class="fas fa-paper-plane-o ml-1"></i></button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<div class="text-center">-->
-<!--  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm">Clik to-->
-<!--    create new customer</a>-->
-<!--</div>-->
-<!--&lt;!&ndash;create&ndash;&gt;-->
 <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
@@ -164,7 +100,8 @@
         <div class="mx-auto row">
           <input type="hidden" name="id" id="idDelete">
           <button type="button" class="btn btn-secondary mx-1" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-danger mx-1 " (click)="deleteModal()" data-dismiss="modal">Delete</button>
+          <button type="submit" class="btn btn-danger mx-1 " (click)="deleteModal()" data-dismiss="modal">Delete
+          </button>
         </div>
       </div>
     </div>

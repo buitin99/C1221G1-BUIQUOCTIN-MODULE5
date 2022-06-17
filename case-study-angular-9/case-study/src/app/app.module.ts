@@ -23,6 +23,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
 import { DeleteFacilityComponent } from './model/delete-facility/delete-facility.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

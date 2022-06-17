@@ -27,6 +27,20 @@
       "customerIdCard": "123123321",
       "customerBirth": "2022-06-06",
       "id": 2
+    },
+    {
+      "customerCode": "KH-1222",
+      "customerName": "z",
+      "customerPhone": "0901234564",
+      "customerIdCard": "123123123",
+      "customerEmail": "123@gmail.com",
+      "customerAddress": "123",
+      "customerType": {
+        "id": 2,
+        "type": "Platinum"
+      },
+      "customerBirth": "2022-06-30",
+      "id": 3
     }
   ],
   "contracts": [

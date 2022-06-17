@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Customer} from '../../model/customer';
 import {CustomerService} from '../../service/customer.service';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
@@ -25,10 +25,14 @@ import {Router} from '@angular/router';
 })
 export class CustomerComponent implements OnInit {
   @Output() submitCustomer = new EventEmitter();
-  customerForm: FormGroup;
+  @ViewChild('keySearch1') keySearch1: ElementRef;
+  @ViewChild('keySearch2') keySearch2: ElementRef;
+  @ViewChild('keySearch3') keySearch3: ElementRef;
 
+  customerForm: FormGroup;
   customers: Customer[] = [];
   customerType: CustomerType[] = [];
+  customerSearch: Customer[] = [];
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
@@ -45,19 +49,25 @@ export class CustomerComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getAll();
+    this.customerService.search('', '', '').subscribe(customers => this.customers
+      = customers, () => {
+
+    });
+    console.log(this.customers);
   }
 
   getAll() {
     // this.customers = this.customerService.getAll();
     this.customerService.getAll().subscribe(customer => {
       this.customers = customer;
-      console.log("error");
-    })
+      // console.log('error');
+    });
   }
 
   idToDelete: number;
   nameToDelete: string;
+  p: string | number;
+
   showMessage(id: number, customerName: string) {
     this.idToDelete = id;
     this.nameToDelete = customerName;
@@ -66,12 +76,20 @@ export class CustomerComponent implements OnInit {
   deleteModal() {
     this.customerService.delete(this.idToDelete).subscribe(() => {
       // @ts-ignore
-      this.router.navigateByUrl(['/customers/list'])
+      this.router.navigateByUrl(['/customers/list']);
     }, error => {
       console.log(error);
     });
     this.ngOnInit();
   }
 
-
+  search() {
+    console.log(this.keySearch1.nativeElement.value);
+    console.log(this.keySearch2.nativeElement.value);
+    console.log(this.keySearch3.nativeElement.value);
+    this.customerService.search(this.keySearch1.nativeElement.value, this.keySearch2.nativeElement.value,
+      this.keySearch3.nativeElement.value).subscribe(customers => {
+      this.customers = customers;
+    });
+  }
 }
