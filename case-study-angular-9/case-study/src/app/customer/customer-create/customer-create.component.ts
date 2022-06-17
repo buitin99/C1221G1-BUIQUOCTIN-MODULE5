@@ -35,11 +35,15 @@ export class CustomerCreateComponent implements OnInit {
   }
 
   customerSubmit() {
+    const customer = this.customerForm.value;
     if (this.customerForm.valid) {
       this.submitCustomer.emit(this.customerForm.value);
-      this.customerService.add(this.customerForm.value);
-      this.router.navigateByUrl('customer');
+      this.customerService.add(customer).subscribe(() => {
+        alert('Tạo thành công');
+      });
+      this.router.navigateByUrl('customer/list');
       console.log(this.customerForm);
     }
+    this.ngOnInit();
   }
 }

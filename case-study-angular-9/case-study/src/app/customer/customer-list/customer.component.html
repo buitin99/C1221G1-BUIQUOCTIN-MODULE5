@@ -6,6 +6,7 @@
       <thead class="bg-light">
       <tr>
 <!--        <th class="col-1">Id</th>-->
+        <th class="col-2">#</th>
         <th class="col-2">Code</th>
         <th class="col-2">Name</th>
 <!--        <th class="col-1">Gender</th>-->
@@ -19,7 +20,8 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of customers">
+      <tr *ngFor="let c of customers; index as i">
+        <td class="col-2" >{{i + 1}}</td>
 <!--        <td class="col-1">{{c.customerId}}</td>-->
         <td class="col-2">{{c.customerCode}}</td>
         <td class="col-2">{{c.customerName}}</td>
@@ -31,10 +33,10 @@
         <td class="col-1">{{c.customerAddress}}</td>
         <td class="col-1">{{c.customerType.type}}</td>
         <div>
-          <a [routerLink]="['/customer/update',c.customerId]"  style="float: left" class="btn btn-warning">Update</a>
+          <a [routerLink]="['/customer/update',c.id]"  style="float: left" class="btn btn-warning">Update</a>
           <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                   data-toggle="modal"
-                  (click)="showMessage(c.customerId,c.customerName)">Delete
+                  (click)="showMessage(c.id,c.customerName)">Delete
             <i class='bx bx-trash'></i>
           </button>
         </div>

@@ -19,23 +19,14 @@ export class FacilityUpdateComponent implements OnInit {
   constructor(private facilityService: FacilityService, private activatedRouter: ActivatedRoute,
               private router: Router) {
     this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) =>
-      this.id = +  paramMap.get('serviceId'));
+      this.id = +paramMap.get('serviceId'));
     const facility = this.getFacility(this.id);
     // const routerParams = this.activatedRouter.snapshot.paramMap;
     // this.id = Number(routerParams.get('serviceId'));
     // this.facility = this.facilityService.findById(this.id);
     // console.log(this.facility);
     console.log(facility);
-    this.facilityEditForm = new FormGroup({
-      serviceName: new FormControl(facility.serviceName, [Validators.required]),
-      serviceArea: new FormControl(facility.serviceArea, [Validators.required]),
-      serviceCost: new FormControl(facility.serviceCost, [Validators.required]),
-      serviceMaxPeople: new FormControl(facility.serviceMaxPeople, [Validators.required]),
-      standardRoom: new FormControl(facility.standardRoom, [Validators.required]),
-      descriptionOtherConvenience: new FormControl(facility.descriptionOtherConvenience, [Validators.required]),
-      poolArea: new FormControl(facility.poolArea, [Validators.required]),
-      numberOfFloor: new FormControl(facility.numberOfFloor, [Validators.required])
-    });
+
   }
 
   ngOnInit(): void {
@@ -43,18 +34,30 @@ export class FacilityUpdateComponent implements OnInit {
   }
 
 
-   getFacility(id: number) {
-    return this.facilityService.findById(id);
+  getFacility(id: number) {
+    // return this.facilityService.findById(id);
+    return this.facilityService.findById(id).subscribe(facility => {
+      this.facilityEditForm = new FormGroup({
+        serviceName: new FormControl(facility.serviceName, [Validators.required]),
+        serviceArea: new FormControl(facility.serviceArea, [Validators.required]),
+        serviceCost: new FormControl(facility.serviceCost, [Validators.required]),
+        serviceMaxPeople: new FormControl(facility.serviceMaxPeople, [Validators.required]),
+        standardRoom: new FormControl(facility.standardRoom, [Validators.required]),
+        descriptionOtherConvenience: new FormControl(facility.descriptionOtherConvenience, [Validators.required]),
+        poolArea: new FormControl(facility.poolArea, [Validators.required]),
+        numberOfFloor: new FormControl(facility.numberOfFloor, [Validators.required])
+      });
+    });
   }
 
   updateFacility(id: number) {
     const facility = this.facilityEditForm.value;
-    if (this.facilityEditForm.valid){
+    if (this.facilityEditForm.valid) {
       this.facilityService.updateFacility(id, facility);
       alert('Cập nhật thành công!');
       this.router.navigateByUrl('facility');
-      // this.ngOnInit()
     }
+    this.ngOnInit()
     console.log(facility);
   }
 }

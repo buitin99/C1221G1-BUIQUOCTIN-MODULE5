@@ -23,16 +23,16 @@ export class CustomerUpdateComponent implements OnInit {
       this.id = +paramMap.get('customerId'));
     const customer = this.getCustomer(this.id);
     console.log(customer);
-    this.customerEditForm = new FormGroup({
-      customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern(/^KH-\d{4}$/)]),
-      customerName: new FormControl(customer.customerName, [Validators.required]),
-      customerPhone: new FormControl(customer.customerPhone, [Validators.required,  Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
-      customerAddress: new FormControl(customer.customerAddress, [Validators.required]),
-      customerEmail: new FormControl(customer.customerEmail, [Validators.required, Validators.email]),
-      customerType: new FormControl(customer.customerType, [Validators.required]),
-      customerIdCard: new FormControl(customer.customerIdCard, [Validators.required, Validators.pattern(/^\d{9}$/)]),
-      customerBirth: new FormControl(customer.customerBirth, [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)])
-    });
+    // this.customerEditForm = new FormGroup({
+    //   customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern(/^KH-\d{4}$/)]),
+    //   customerName: new FormControl(customer.customerName, [Validators.required]),
+    //   customerPhone: new FormControl(customer.customerPhone, [Validators.required,  Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
+    //   customerAddress: new FormControl(customer.customerAddress, [Validators.required]),
+    //   customerEmail: new FormControl(customer.customerEmail, [Validators.required, Validators.email]),
+    //   customerType: new FormControl(customer.customerType, [Validators.required]),
+    //   customerIdCard: new FormControl(customer.customerIdCard, [Validators.required, Validators.pattern(/^\d{9}$/)]),
+    //   customerBirth: new FormControl(customer.customerBirth, [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)])
+    // });
   }
 
   ngOnInit(): void {
@@ -40,13 +40,33 @@ export class CustomerUpdateComponent implements OnInit {
   }
 
   private getCustomer(id: number) {
-    return this.customerService.findById(id);
+    // return this.customerService.findById(id);
+    return this.customerService.findById(id).subscribe(customer => {
+      this.customerEditForm = new FormGroup({
+        customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern(/^KH-\d{4}$/)]),
+        customerName: new FormControl(customer.customerName, [Validators.required]),
+        customerPhone: new FormControl(customer.customerPhone, [Validators.required,  Validators.pattern(/^(090|091|(84)+90|(84)+91)\d{7}$/)]),
+        customerAddress: new FormControl(customer.customerAddress, [Validators.required]),
+        customerEmail: new FormControl(customer.customerEmail, [Validators.required, Validators.email]),
+        customerType: new FormControl(customer.customerType, [Validators.required]),
+        customerIdCard: new FormControl(customer.customerIdCard, [Validators.required, Validators.pattern(/^\d{9}$/)]),
+        customerBirth: new FormControl(customer.customerBirth, [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)])
+      })
+    })
   }
 
   updateCustomer(id: number) {
+    // const customer = this.customerEditForm.value;
+    // this.customerService.updateCustomer(id, customer);
+    // alert('Update thanh cong');
+    // this.router.navigateByUrl('customer');
     const customer = this.customerEditForm.value;
-    this.customerService.updateCustomer(id, customer);
-    alert('Update thanh cong');
-    this.router.navigateByUrl('customer');
+    this.customerService.updateCustomer(id,customer).subscribe(() => {
+      alert('Cập nhật thành công');
+    },error => {
+      console.log(error);
+    })
+    this.ngOnInit();
   }
+
 }

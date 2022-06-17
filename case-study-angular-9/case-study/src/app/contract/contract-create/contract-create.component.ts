@@ -35,7 +35,9 @@ export class ContractCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.facility = this.facilityDetailService.getAll();
-    this.customer = this.customerService.getAll();
+    this.customerService.getAll().subscribe(
+      x => this.customer = x,
+    )
   }
 
   contractSubmit() {

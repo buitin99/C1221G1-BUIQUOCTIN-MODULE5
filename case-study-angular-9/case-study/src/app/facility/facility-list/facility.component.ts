@@ -20,20 +20,25 @@ export class FacilityComponent implements OnInit {
   }
 
   getAll() {
-    this.facility = this.facilityService.getAll();
+    // this.facility = this.facilityService.getAll();
+    this.facilityService.getAll().subscribe(f => {
+      this.facility = f;
+      console.log("error");
+    })
+    this.ngOnInit();
   }
   delete(facilityName: string) {
     this.facilityDelete = facilityName;
   }
-  idToDelete: number;
+  id: number;
   nameToDelete: string;
   showMessage(serviceId: number, serviceName: string) {
-    this.idToDelete = serviceId;
+    this.id = serviceId;
     this.nameToDelete = serviceName;
   }
 
   deleteModal() {
-    this.facilityService.delete(this.idToDelete);
+    this.facilityService.delete(this.id);
     // this.router.navigateByUrl("/facility");
     this.ngOnInit();
   }

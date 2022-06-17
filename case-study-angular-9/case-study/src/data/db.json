@@ -1,20 +1,32 @@
 {
   "customers": [
     {
-      "id": 1,
       "customerCode": "KH-0001",
-      "customerId": 1,
       "customerName": "Bùi Quốc Tín",
-      "customerBirth": "1999-01-01",
-      "customerIdCard": "4523857462",
-      "customerGender": "male",
       "customerPhone": "0123456789",
+      "customerAddress": "DaNang2",
       "customerEmail": "buiquoctin@gmail.com",
-      "customerAddress": "DaNang",
       "customerType": {
         "id": 1,
         "type": "Diamond"
-      }
+      },
+      "customerIdCard": "4523857462",
+      "customerBirth": "1999-01-01",
+      "id": 1
+    },
+    {
+      "customerCode": "KH-1222",
+      "customerName": "Bùi Quốc Tín",
+      "customerPhone": "0901231231",
+      "customerAddress": "7",
+      "customerEmail": "buiquoctin250199@gmail.com",
+      "customerType": {
+        "id": 1,
+        "type": "Diamond"
+      },
+      "customerIdCard": "123123321",
+      "customerBirth": "2022-06-06",
+      "id": 2
     }
   ],
   "contracts": [
@@ -149,7 +161,12 @@
       "id": 5
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "facilities": {"id": 1, "serviceName": "Villa-Vip", "serviceArea": 200
+  , "serviceCost": 500, "serviceMaxPeople": 5, "standardRoom": "Vip", "descriptionOtherConvenience": "Tivi + Tủ lạnh", "poolArea": 200,
+    "numberOfFloor": 3, "facilityType": {
+      "id": 1,
+      "type": "Villa"}, "rentType": {
+      "id": 1,
+      "type": "Day"
+    }}
 }

@@ -92,10 +92,10 @@
           <p>Floor : {{f.numberOfFloor}}</p>
           <p>Floor : {{f.numberOfFloor}}</p>
           <div>
-            <a [routerLink]="['/facility/update',f.serviceId]" class="btn btn-warning" style="float: left">Update</a>
+            <a [routerLink]="['/facility/update',f.id]" class="btn btn-warning" style="float: left">Update</a>
             <button class="btn btn-danger" style="float: right" data-target="#deleteModal"
                     data-toggle="modal"
-                    (click)="showMessage(f.serviceId,f.serviceName)">Delete
+                    (click)="showMessage(f.id,f.serviceName)">Delete
               <i class='bx bx-trash'></i>
             </button>
           </div>
