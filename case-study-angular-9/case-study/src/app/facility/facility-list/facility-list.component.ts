@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {Facility} from '../../model/facility';
 import {FacilityService} from '../../service/facility.service';
 import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-facility',
-  templateUrl: './facility.component.html',
-  styleUrls: ['./facility.component.css']
+  templateUrl: './facility-list.component.html',
+  styleUrls: ['./facility-list.component.css']
 })
-export class FacilityComponent implements OnInit {
+export class FacilityListComponent implements OnInit {
 
-  facility: Facility[] = [];
+  facility: Facility[];
   facilityDelete: string;
 
   constructor(private facilityService: FacilityService, private router: Router) { }
@@ -20,13 +21,10 @@ export class FacilityComponent implements OnInit {
   }
 
   getAll() {
-    // this.facility = this.facilityService.getAll();
     this.facilityService.getAll().subscribe(f => {
       this.facility = f;
-      console.log("error");
     })
-    this.ngOnInit();
-  }
+  };
   delete(facilityName: string) {
     this.facilityDelete = facilityName;
   }
@@ -38,8 +36,10 @@ export class FacilityComponent implements OnInit {
   }
 
   deleteModal() {
-    this.facilityService.delete(this.id);
-    // this.router.navigateByUrl("/facility");
-    this.ngOnInit();
+    this.facilityService.delete(this.id).subscribe(() => {
+      this.ngOnInit();
+      this.router.navigateByUrl('/facilities/list');
+    })
+
   }
 }

@@ -161,12 +161,63 @@
       "id": 5
     }
   ],
-  "facilities": {"id": 1, "serviceName": "Villa-Vip", "serviceArea": 200
-  , "serviceCost": 500, "serviceMaxPeople": 5, "standardRoom": "Vip", "descriptionOtherConvenience": "Tivi + Tủ lạnh", "poolArea": 200,
-    "numberOfFloor": 3, "facilityType": {
-      "id": 1,
-      "type": "Villa"}, "rentType": {
-      "id": 1,
-      "type": "Day"
-    }}
+  "facilities": [
+    {
+      "serviceName": "Villa-Vip",
+      "serviceArea": 200,
+      "serviceCost": 500,
+      "serviceMaxPeople": 5,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "Tivi + Tủ lạnh",
+      "poolArea": 200,
+      "rentType": {
+        "id": 1,
+        "type": "Day"
+      },
+      "facilityDetail": {
+        "id": 1,
+        "type": "Villa"
+      },
+      "numberOfFloor": "4",
+      "id": 1
+    },
+    {
+      "serviceName": "Villa-Vip",
+      "serviceArea": "12",
+      "serviceCost": "12",
+      "serviceMaxPeople": "12",
+      "standardRoom": "12",
+      "descriptionOtherConvenience": "12",
+      "poolArea": "12",
+      "rentType": {
+        "id": 1,
+        "type": "Day"
+      },
+      "facilityDetail": {
+        "id": 1,
+        "type": "Buffet"
+      },
+      "numberOfFloor": "4",
+      "id": 2
+    },
+    {
+      "serviceName": "Villa-Vip",
+      "serviceArea": "12",
+      "serviceCost": "12",
+      "serviceMaxPeople": "12",
+      "standardRoom": "12",
+      "descriptionOtherConvenience": "12",
+      "poolArea": "12",
+      "rentType": {
+        "id": 1,
+        "type": "Day"
+      },
+      "facilityDetail": {
+        "id": 2,
+        "type": "Karaoke"
+      },
+      "numberOfFloor": "12",
+      "id": 3
+    }
+  ]
 }

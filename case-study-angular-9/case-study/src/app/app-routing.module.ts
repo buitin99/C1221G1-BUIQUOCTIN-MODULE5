@@ -4,7 +4,7 @@ import {CustomerCreateComponent} from './customer/customer-create/customer-creat
 import {CustomerUpdateComponent} from './customer/customer-update/customer-update.component';
 import {CustomerComponent} from './customer/customer-list/customer.component';
 import {HomePageComponent} from './home-page/home-page.component';
-import {FacilityComponent} from './facility/facility-list/facility.component';
+import {FacilityListComponent} from './facility/facility-list/facility-list.component';
 import {FacilityCreateComponent} from './facility/facility-create/facility-create.component';
 import {FacilityUpdateComponent} from './facility/facility-update/facility-update.component';
 import {ContractComponent} from './contract/contract-list/contract.component';

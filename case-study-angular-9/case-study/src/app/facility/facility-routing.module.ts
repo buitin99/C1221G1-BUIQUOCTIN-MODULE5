@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {FacilityCreateComponent} from './facility-create/facility-create.component';
 import {FacilityUpdateComponent} from './facility-update/facility-update.component';
-import {FacilityComponent} from './facility-list/facility.component';
+import {FacilityListComponent} from './facility-list/facility-list.component';
 
 
 const routes: Routes = [
-  {path: 'list', component: FacilityComponent},
+  {path: 'list', component: FacilityListComponent},
   {path: 'create', component: FacilityCreateComponent},
-  {path: 'update/:serviceId', component: FacilityUpdateComponent},
+  {path: 'update/:id', component: FacilityUpdateComponent},
 ];
 
 @NgModule({

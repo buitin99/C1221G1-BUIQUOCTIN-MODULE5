@@ -4,8 +4,8 @@ import {FacilityService} from '../../service/facility.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {RentType} from '../../model/rent-type';
 import {FacilityType} from '../../model/facility-type';
-import {log} from 'util';
-import {Facility} from '../../model/facility';
+import {RentTypeService} from '../../service/rent-type.service';
+import {FacilityDetailService} from '../../service/facility-detail.service';
 
 @Component({
   selector: 'app-facility-update',
@@ -15,11 +15,14 @@ import {Facility} from '../../model/facility';
 export class FacilityUpdateComponent implements OnInit {
   facilityEditForm: FormGroup;
   id: number;
-
+  rentType: RentType[] = [];
+  facility: FacilityType[] = [];
   constructor(private facilityService: FacilityService, private activatedRouter: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private renTypeService: RentTypeService,
+              private facilityDetailService: FacilityDetailService) {
     this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) =>
-      this.id = +paramMap.get('serviceId'));
+      this.id = +paramMap.get('id'));
     const facility = this.getFacility(this.id);
     // const routerParams = this.activatedRouter.snapshot.paramMap;
     // this.id = Number(routerParams.get('serviceId'));
@@ -30,7 +33,8 @@ export class FacilityUpdateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.rentType = this.renTypeService.getAll();
+    this.facility = this.facilityDetailService.getAll();
   }
 
 
@@ -45,6 +49,8 @@ export class FacilityUpdateComponent implements OnInit {
         standardRoom: new FormControl(facility.standardRoom, [Validators.required]),
         descriptionOtherConvenience: new FormControl(facility.descriptionOtherConvenience, [Validators.required]),
         poolArea: new FormControl(facility.poolArea, [Validators.required]),
+        rentType: new FormControl(facility.rentType, [Validators.required]),
+        facilityDetail: new FormControl(facility.facilityType, [Validators.required]),
         numberOfFloor: new FormControl(facility.numberOfFloor, [Validators.required])
       });
     });
@@ -53,11 +59,13 @@ export class FacilityUpdateComponent implements OnInit {
   updateFacility(id: number) {
     const facility = this.facilityEditForm.value;
     if (this.facilityEditForm.valid) {
-      this.facilityService.updateFacility(id, facility);
-      alert('Cập nhật thành công!');
-      this.router.navigateByUrl('facility');
+      this.facilityService.updateFacility(id, facility).subscribe(() => {
+        alert('Cập nhật thành công!');
+        this.router.navigateByUrl('facility/list');
+      });
     }
     this.ngOnInit()
     console.log(facility);
+    console.log(this.facilityEditForm.valid);
   }
 }

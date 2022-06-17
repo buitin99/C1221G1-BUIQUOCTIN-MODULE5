@@ -43,12 +43,16 @@ export class FacilityCreateComponent implements OnInit {
   }
 
   facilitySubmit() {
+    const facility = this.facilityForm.value;
     console.log(this.facilityForm.value);
     if (this.facilityForm.valid) {
       this.submitFacility.emit(this.facilityForm.value);
-      this.facilityService.add(this.facilityForm.value);
-      this.router.navigateByUrl('facility');
+      this.facilityService.add(facility).subscribe(() => {
+        this.ngOnInit();
+      })
+      this.router.navigateByUrl('facility/list');
       console.log(this.facilityForm);
+      alert('Tạo thành công');
     }
   }
 }
