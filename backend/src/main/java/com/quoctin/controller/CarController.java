@@ -86,5 +86,12 @@ public class CarController {
         return new ResponseEntity<>(optionalCarRegister.get(), HttpStatus.OK);
     }
 
+    @PostMapping("/save")
+    public ResponseEntity<?> saveCar(@RequestBody Car Cars) {
+        carService.save(Cars);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+
 
 }
