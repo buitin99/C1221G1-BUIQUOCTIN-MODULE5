@@ -1,13 +1,10 @@
-package com.quoctin.model;
+package com.quoctin.dto;
 
-import javax.persistence.*;
-import java.util.List;
+import com.quoctin.model.City;
+import com.quoctin.model.Type;
 
-@Entity
-@Table
-public class Car {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CarDto {
+
     private Integer id;
     private String licensePlates;
     private String name;
@@ -15,23 +12,14 @@ public class Car {
     private String email;
     private String startTime;
     private String endTime;
-
-    @ManyToOne
-    @JoinColumn(name = "type_id", referencedColumnName = "id")
     private Type type;
-
-    @ManyToOne
-    @JoinColumn(name = "departure_id", referencedColumnName = "id")
     private City departure;
-
-    @ManyToOne
-    @JoinColumn(name = "destination_id", referencedColumnName = "id")
     private City destination;
 
-    public Car() {
+    public CarDto() {
     }
 
-    public Car(String licensePlates, String name, String phone, String email, String startTime, String endTime, Type type, City departure, City destination) {
+    public CarDto(String licensePlates, String name, String phone, String email, String startTime, String endTime, Type type, City departure, City destination) {
         this.licensePlates = licensePlates;
         this.name = name;
         this.phone = phone;
@@ -45,10 +33,6 @@ public class Car {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getLicensePlates() {
@@ -107,19 +91,23 @@ public class Car {
         this.type = type;
     }
 
-    public City getCityDeparture() {
+    public City getDeparture() {
         return departure;
     }
 
-    public void setCityDeparture(City cityDeparture) {
+    public void setDeparture(City departure) {
         this.departure = departure;
     }
 
-    public City getCityDestination() {
+    public City getDestination() {
         return destination;
     }
 
-    public void setCityDestination(City cityDestination) {
+    public void setDestination(City destination) {
         this.destination = destination;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
