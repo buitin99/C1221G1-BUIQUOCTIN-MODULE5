@@ -1,23 +1,25 @@
 package com.quoctin.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table
+@JsonIgnoreProperties({"departureList","destinationList"})
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    @JsonBackReference
+
     @OneToMany(mappedBy = "departure")
     private List<Car> departureList;
 
-    @JsonBackReference
+
     @OneToMany(mappedBy = "destination")
     private List<Car> destinationList;
 

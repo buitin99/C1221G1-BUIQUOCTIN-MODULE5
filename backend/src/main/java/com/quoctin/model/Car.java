@@ -107,19 +107,19 @@ public class Car {
         this.type = type;
     }
 
-    public City getCityDeparture() {
+    public City getDeparture() {
         return departure;
     }
 
-    public void setCityDeparture(City cityDeparture) {
+    public void setDeparture(City departure) {
         this.departure = departure;
     }
 
-    public City getCityDestination() {
+    public City getDestination() {
         return destination;
     }
 
-    public void setCityDestination(City cityDestination) {
+    public void setDestination(City destination) {
         this.destination = destination;
     }
 }
